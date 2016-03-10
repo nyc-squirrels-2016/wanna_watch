@@ -98,7 +98,7 @@ Patrick 10 - 4 Sunday
 Liam 10 - 4 Sunday
 Steven 10 -4 Sunday
 
-Break at 12:15 to assess progress.
+Break at 12:15 to assess progress each day.
 
 
 <a name="team"></a>
@@ -111,9 +111,6 @@ Break at 12:15 to assess progress.
 |Designer    | Patrick |
 |Developers  | ALL     |
 
-Patrick 386-490-3320
-Liam 631-926-9213
-Steven 404-520-9064
 
 <a name="git"></a>
 DO NOT MERGE YOUR OWN BRANCH
