@@ -73,7 +73,7 @@
 ####Time Allocation for MVP
 |Home Page                    | 8 hrs  |
 |User CRUD                    | 15 hrs |
-|Events CRUD                  | 10 hrs |
+|Events CRUD                  | 15 hrs |
 |Messaging Feature + Research | 20 hrs |
 |Search Feature               | 8 hrs  |
 |Integration Time             | 20 hrs |
