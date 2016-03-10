@@ -1,12 +1,12 @@
 ####Table of Contents
-1. [Features](#features)
-  a) [MVP features](#MVP)
-  b) [Stretch Features](#stretch)
-  c) [Nice to Have Features](#nice)
-2. [Time Allocation](#time)
-3. [Working Agreement](#working)
-4. [Team Designations](#team)
-5. [Git Rules](#git)
+1. [Features](#features)  
+  a) [MVP features](#MVP)  
+  b) [Stretch Features](#stretch)  
+  c) [Nice to Have Features](#nice)  
+2. [Time Allocation](#time)  
+3. [Working Agreement](#working)  
+4. [Team Designations](#team)  
+5. [Git Rules](#git)  
 
 <a name="features"></a>
 ####Features
@@ -31,7 +31,6 @@
 4. Users can list a new event
   a) User was on profile page and clicked "host a new event" button. AJAX
   b) Show/Date/Time/Description is shown
-  -----------------------------------------------------
   Page for specific event
     I) show / time
     II) user photo and user couch photo
