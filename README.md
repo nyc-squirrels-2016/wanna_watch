@@ -119,6 +119,10 @@ Delete branch once it is merged
 Make commits for every change
 
 [TV API](http://www.tvmaze.com/api)
+Front end: Foundation
+Firebase for messaging.
+AWS for image uploading.
+Paperclip on rails side.
 
 <a name="design"></a>
 ####Design Ideas
