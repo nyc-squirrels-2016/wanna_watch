@@ -74,7 +74,7 @@
 |-----------------------------|--------|
 |Home Page                    | 8 hrs  |
 |User CRUD                    | 15 hrs |
-|Events CRUD                  | 10 hrs |
+|Events CRUD                  | 15 hrs |
 |Messaging Feature + Research | 20 hrs |
 |Search Feature               | 8 hrs  |
 |Integration Time             | 20 hrs |
@@ -99,7 +99,7 @@ Patrick 10 - 4 Sunday
 Liam 10 - 4 Sunday
 Steven 10 -4 Sunday
 
-Break at 12:15 to assess progress.
+Break at 12:15 to assess progress each day.
 
 
 <a name="team"></a>
@@ -113,9 +113,6 @@ Break at 12:15 to assess progress.
 |Designer    | Patrick |
 |Developers  | ALL     |
 
-Patrick 386-490-3320
-Liam 631-926-9213
-Steven 404-520-9064
 
 <a name="git"></a>
 DO NOT MERGE YOUR OWN BRANCH
@@ -124,6 +121,10 @@ Delete branch once it is merged
 Make commits for every change
 
 [TV API](http://www.tvmaze.com/api)
+Front end: Foundation
+Firebase for messaging.
+AWS for image uploading.
+Paperclip on rails side.
 
 <a name="design"></a>
 ####Design Ideas
