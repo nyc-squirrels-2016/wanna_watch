@@ -70,6 +70,8 @@
 
 <a name="time"></a>
 ####Time Allocation for MVP
+|Work                         | time   |
+|-----------------------------|--------|
 |Home Page                    | 8 hrs  |
 |User CRUD                    | 15 hrs |
 |Events CRUD                  | 10 hrs |
@@ -102,7 +104,8 @@ Break at 12:15 to assess progress.
 
 <a name="team"></a>
 #####Team Designations
-
+|Role        | Person  |
+|------------|---------|
 |lead        | Steven  |
 |QA          | Patrick |
 |DevOps      | Liam    |
