@@ -60,6 +60,23 @@
   font-weight: bold;
 }
 
+.card-actions {
+  display: table-cell;
+  margin-top: 0;
+  vertical-align: top;
+  width: 30%;
+}
+
+.read-more {
+  position: absolute;
+  margin-left: 33%;
+  margin-top: -8%;
+}
+
 .box-header {
   border-bottom: .1em solid #bfcad2;
+}
+
+hr {
+  border-bottom: 1px solid #bfcad2;
 }
