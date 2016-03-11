@@ -33,11 +33,13 @@
 }
 
 .description1 p {
-	border: 1px solid black;
+	border: 3px solid black;
 	width: 68%;
 	height: 50%;
 	float: right;
 	font-size: 1.5em;
+	padding: 3% 1% 0% 1%;
+	margin: 0% 1% 1% 0%;
 }
 
 .description2 {
@@ -45,11 +47,13 @@
 }
 
 .description2 p {
-	border: 1px solid black;
+	border: 3px solid black;
 	width: 68%;
 	height: 50%;
 	float: left;
 	font-size: 1.5em;
+	padding: 3% 1% 0% 1%;
+	margin: 0% 1% 1% 0%;
 }
 
 .description3 {
@@ -61,9 +65,11 @@
 }
 
 .description3 p {
-	border: 1px solid black;
+	border: 3px solid black;
 	width: 68%;
 	height: 50%;
 	float: right;
 	font-size: 1.5em;
+	padding: 3% 1% 0% 1%;
+	margin: 0% 1% 1% 0%;
 }
