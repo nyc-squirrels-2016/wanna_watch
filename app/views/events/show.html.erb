@@ -1,0 +1,24 @@
+
+<div class= "wrapper">
+
+<div class="apartment">
+  <img class="apartment-photo" src="../../imgs/apartment.jpg" />
+  <h2><%=@event.location%></h2>
+  <p>You're watching <%= @event.shows %> with <%= @user.first_name %> <%= @user.last_name %></p>
+  <p><%=@event.time.hour%>:<%=@event.time.min%></p>
+  <p><%=@event.date.month %> / <%=@event.date.day %> / <%=@event.date.year %></p>
+
+<div class="host">
+    <img class="host-photo" src="../../imgs/user.jpg" />
+ </div>
+
+<div class="photo3">
+  <p><img src="../../imgs/person1.png" /></p>
+  <p><img src="../../imgs/person2.png" /></p>
+</div>
+
+<div class="attending_button">
+</div>
+
+
+</div>
