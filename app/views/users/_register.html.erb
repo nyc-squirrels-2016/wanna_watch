@@ -1,17 +1,17 @@
 
 <%= form_for User.new do |f| %>
-  <p><%=f.label :email %>
-  <%=f.text_field :email %></p>
-  <p><%=f.label :first_name %>
-    <%=f.text_field :first_name%></p>
-  <p><%=f.label :last_name %>
-    <%=f.text_field :last_name%></p>
+  <p>
+  <%=f.text_field :email, placeholder: "email" %></p>
+  <p>
+    <%=f.text_field :first_name, placeholder: "first name"%></p>
+  <p>
+    <%=f.text_field :last_name, placeholder: "last name"%></p>
 
-  <p><%=f.label :username %>
-  <%=f.text_field :username %></p>
+  <p>
+  <%=f.text_field :username, placeholder: "username" %></p>
 
-  <p><%=f.label :password %>
-  <%=f.password_field :password %></p>
+  <p>
+  <%=f.password_field :password, placeholder: "password" %></p>
 
  <p> <%= f.submit "Become a Watcher"%> </p>
 
