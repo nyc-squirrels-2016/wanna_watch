@@ -17,4 +17,11 @@ class User < ActiveRecord::Base
   	end
   	requests_recieved.flatten
   end
+
+  def requests_approved 
+    events = self.requests.where(active: 0).map do |request|
+      request.event
+    end
+    events
+  end
 end
