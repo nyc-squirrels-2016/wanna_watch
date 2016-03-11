@@ -1,4 +1,4 @@
-<% if @requests.any? %>
+<% if @requests %>
 	<% @requests.each do |request| %>
 		<div class="requests-recieved">
 			<div class="request-form">
@@ -8,7 +8,7 @@
 				<p>Request</p>
 				<p>Date: <%= request.event.date %></p>
 				<p>Time: <%= request.event.time.hour %>:00</p>
-				<p>Shows: <%= request.event.shows %></p>
+				<p>Shows: <%= request.event.show %></p>
 				<p>Name: <%= request.guest.first_name%> <%= request.guest.last_name %></p>
 				<p>About your Guest: <%= request.guest.about_me %></p>
 			</div>
