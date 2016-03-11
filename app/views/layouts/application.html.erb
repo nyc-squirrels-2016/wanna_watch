@@ -9,9 +9,9 @@
 </head>
 <body>
 	<nav>
-		<ul>
-			<li><%= link_to "Home", root_path %></li>
-		</ul>
+
+			<p> <%= link_to "Home", root_path %> | <%= link_to "Login", login_path %> | <%= link_to "Register", register_path %> </p>
+
 	</nav>
 
 <%= yield %>
