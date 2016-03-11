@@ -1,53 +1,56 @@
+
+
+.wrapper {
+  background-color: white;
+  width: 50%;
+  height: 30%;
+  margin-left: 2em;
+}
+
+body {
+  background-color: #f0f0f5;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+}
+
 .apartment p {
-  margin-left: 200px;
-  display: inline;
+  margin-left: 23%;
+  display: block;
   font-weight: bold;
-  font-size: 200%;
+  font-size: 100%;
   font-family: Helvetica;
   color: black;
-  word-spacing: 10px;
 }
 
 .apartment-photo {
   border-radius: 50%;
-  width: 20%;
-  height: 20%;
+  width: 30%;
+  height: 15%;
   float: left;
-  display: block;
-}
-.event_time p {
-  margin-left: 200px;
-  display: inline;
-  font-weight: bold;
-  font-size: 200%;
-  font-family: Helvetica;
-  color: black;
-  word-spacing: 10px;
+  position: relative;
+  top: 10;
+  left: 0;
 }
 
-.event_date p {
-  margin-left: 200px;
-  display: inline;
-  font-weight: bold;
-  font-size: 200%;
-  font-family: Helvetica;
-  color: black;
-  word-spacing: 10px;
-}
 
 .host-photo {
   border-radius: 50%;
-  width: 20%;
-  height: 20%;
-  float: right;
-  display: relative;
+  width: 6%;
+  height: 12%;
+  position: absolute;
+  top: 22%;
+  left: 10%;
 }
 
 .host p {
   margin-left: 1000px;
   font-weight: bold;
-  font-size: 200%;
+  font-size: 100%;
   font-family: Helvetica;
   color: black;
-  word-spacing: 10px;
+}
+
+.photo3 p {
+  display: inline;
 }
