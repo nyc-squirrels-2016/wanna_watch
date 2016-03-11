@@ -8,6 +8,8 @@ class CreateUsersTable < ActiveRecord::Migration
       t.string :last_name, null: false
       t.string :about_me
       t.string :phone_number, unique: true
+      t.string :address, null: false
+      t.string :location, null: false, index: true
 
       t.timestamps null: false
     end

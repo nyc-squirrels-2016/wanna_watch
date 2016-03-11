@@ -3,15 +3,23 @@ class EventsController < ApplicationController
   end
 
   def new
+    @event = Event.new
+    render "_new_event", layout: false
   end
 
   def create
+    @user = current_user
     @event = Event.new(event_params)
+    @event.host_id = @user.id
+      if @event.save
+        redirect_to @event
+      else
+        redirect_to @user
+      end
   end
 
   def show
     @event = Event.find(params[:id])
-    @user = User.find(params[:id])
   end
 
   def edit
@@ -26,7 +34,6 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:shows, :time, :date, :description, :User
-      max_occupancy)
+    params.require(:event).permit(:show, :time, :date, :description, :max_occupancy)
   end
 end
