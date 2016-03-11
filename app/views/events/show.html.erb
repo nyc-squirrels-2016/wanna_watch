@@ -3,8 +3,8 @@
 
 <div class="apartment">
   <img class="apartment-photo" src="../../imgs/apartment.jpg" />
-  <h2><%=@event.location%></h2>
-  <p>You're watching <%= @event.shows %> with <%= @user.first_name %> <%= @user.last_name %></p>
+  <h2><%=@event.host.location%></h2>
+  <p>We're watching <%= @event.show %> with <%= @event.host.first_name %> <%= @event.host.last_name %></p>
   <p><%=@event.time.hour%>:<%=@event.time.min%></p>
   <p><%=@event.date.month %> / <%=@event.date.day %> / <%=@event.date.year %></p>
 
@@ -12,12 +12,26 @@
     <img class="host-photo" src="../../imgs/user.jpg" />
  </div>
 
-<div class="photo3">
+
+<%if @event.filled? %>
+	<h3 class="full" >Sorry but this event is full</h3>
+<%end%>
+<!-- <div class="photo3">
   <p><img src="../../imgs/person1.png" /></p>
   <p><img src="../../imgs/person2.png" /></p>
-</div>
+</div> -->
 
 <div class="attending_button">
+	<%if @event.attending_guests%>
+		<%@event.attending_guests.each do |guest| %>
+			<div class="guest-attending"> 
+				<div class="guest-text">
+					<p><%= guest.first_name %> <%= guest.last_name%> is Attending!</p>
+				</div>
+				<img class="guest-image" src="../../imgs/person1.png" />
+			</div>
+		<%end%>
+	<%end%>
 </div>
 
 

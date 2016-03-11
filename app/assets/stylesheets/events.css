@@ -55,3 +55,33 @@ body {
   display: inline
 
 }
+
+.guest-attending {
+  width: 100%;
+  max-height: 70%;
+  border: 2px solid black;
+  display: block;
+  margin: 2%;
+}
+
+.guest-attending p {
+  margin: 1%;
+  font-size: 1em;
+  display: block;
+}
+
+.guest-text {
+  float: right;
+  width: 65%;
+}
+
+.guest-image {
+  display: inline;
+}
+.attending_button {
+  margin: 10% 0% 0% 0%;
+}
+
+.full {
+  margin: 6% 0% 0% 0%;
+}

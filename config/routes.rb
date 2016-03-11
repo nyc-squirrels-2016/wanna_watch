@@ -5,9 +5,10 @@ Rails.application.routes.draw do
 resources :users, only: [:show, :create]
 resources :sessions, only: [:create]
 resources :events
+resources :requests, only: [:create, :update, :index]
 
 
-
+get 'outings' => 'requests#outings'
 get 'register' => 'users#new'
 get 'login' => 'sessions#new'
 get 'logout' => 'sessions#destroy'
