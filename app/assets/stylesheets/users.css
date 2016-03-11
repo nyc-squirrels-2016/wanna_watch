@@ -1,9 +1,82 @@
 
+.container {
+  margin: 0 auto;
+  padding: 1% 10%;
+ }
 
+.profile-description {
+  background-color: white;
+  border-bottom: 1px solid #bfcad2;
+  width: 20em;
+  text-align: center;
+  font-family: helvetica;
+  letter-spacing: 0;
+  font-size: 1.0em;
+  text-transform: uppercase;
+
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 24%;
+  height: 24%;
+  float: left;
+  position: inline;
+  top: 10;
+  left: 0;
+}
+
+.calendar {
+  height: 5%;
+  width: 5%;
+}
 .users_partial form {
   width: 15em;
   padding: 2em;
   border: .2em solid black;
   text-align: center;
-  background-color: grey;
+  background-color: #f0f0f5;
+}
+
+.upcoming-events {
+  box-sizing: border-box;
+  background-color: white;
+  margin: 0;
+  width: 56%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: .5%;
+  border-bottom: 1px solid #bfcad2;
+}
+
+.box-header-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  font-family: helvetica;
+  box-sizing: border-box;
+  -webkit-margin-before: 0.83em;
+  -webkit-margin-after: 0.83em;
+  font-weight: bold;
+}
+
+.card-actions {
+  display: table-cell;
+  margin-top: 0;
+  vertical-align: top;
+  width: 30%;
+}
+
+.read-more {
+  position: absolute;
+  margin-left: 33%;
+  margin-top: -8%;
+}
+
+.box-header {
+  border-bottom: .1em solid #bfcad2;
+}
+
+hr {
+  border-bottom: 1px solid #bfcad2;
 }
