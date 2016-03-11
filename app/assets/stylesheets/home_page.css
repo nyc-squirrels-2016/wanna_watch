@@ -79,3 +79,8 @@
 	left: 43%;
 	top: 20%;
 }
+
+nav {
+	background-color: white;
+	border-bottom: 1px solid black;
+}
