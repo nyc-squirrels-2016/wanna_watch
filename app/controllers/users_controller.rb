@@ -4,6 +4,8 @@ class UsersController<ApplicationController
   end
 
   def new
+    @user = User.new
+    render "_register", layout: false
   end
 
   def create
