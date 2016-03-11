@@ -6,6 +6,7 @@ class EventsController < ApplicationController
   end
 
   def create
+    @event = Event.new(event_params)
   end
 
   def show
@@ -20,5 +21,12 @@ class EventsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def event_params
+    params.require(:event).permit(:shows, :time, :date, :description, :User
+      max_occupancy)
   end
 end
