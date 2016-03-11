@@ -1,0 +1,44 @@
+.apartment p {
+  margin-left: 200px;
+  display: inline;
+  font-weight: bold;
+  font-size: 200%;
+  font-family: Helvetica;
+  color: black;
+  word-spacing: 10px;
+}
+
+.apartment-photo {
+  border-radius: 50%;
+  width: 20%;
+  height: 20%;
+  float: left;
+  display: block;
+}
+.event_time p {
+  margin-left: 200px;
+  display: inline;
+  font-weight: bold;
+  font-size: 200%;
+  font-family: Helvetica;
+  color: black;
+  word-spacing: 10px;
+}
+
+.event_date p {
+  margin-left: 200px;
+  display: inline;
+  font-weight: bold;
+  font-size: 200%;
+  font-family: Helvetica;
+  color: black;
+  word-spacing: 10px;
+}
+
+.host-photo {
+  border-radius: 50%;
+  width: 20%;
+  height: 20%;
+  float: right;
+  display: block;
+}
