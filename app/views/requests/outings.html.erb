@@ -1,0 +1,22 @@
+<% if @requests.any? %>
+	<% @requests.each do |request| %>
+		<div class="requests-recieved">
+			<div class="text">
+				<%if request.active == 1%>
+					<h3>Undecided</h3>
+				<%elsif request.active == 0%>
+					<h3 class="Happy">Accepted!</h3>
+				<%else%>
+					<h3 class="Sad">Declined</h3>
+				<%end%>
+				<p>Request</p>
+				<p>Date: <%= request.event.date %></p>
+				<p>Time: <%= request.event.time.hour %>:00</p>
+				<p>Shows: <%= request.event.shows %></p>
+				<p>Name: <%= request.guest.first_name%> <%= request.guest.last_name %></p>
+				<p>About your Guest: <%= request.guest.about_me %></p>
+			</div>
+			<img class="request-image" src="http://placehold.it/350x350"/>
+		</div>
+	<%end%>
+<%end%>

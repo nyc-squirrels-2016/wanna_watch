@@ -5,6 +5,12 @@ class RequestsController < ApplicationController
 		end
 	end
 
+	def outings
+		if logged_in?
+			@requests = current_user.requests
+		end
+	end
+
 	def create
 		event = Event.find(params[:event_id])
 		request = event.requests.new()
@@ -22,7 +28,7 @@ class RequestsController < ApplicationController
 		request = Request.find(params[:id])
 		if logged_in?
 			if current_user == request.host
-				request.update(active: 0)
+				request.update(request_params)
 				redirect_to requests_path
 			else
 				redirect_to login_path
@@ -32,17 +38,8 @@ class RequestsController < ApplicationController
 		end
 	end
 
-	def destroy
-		request = Request.find(params[:id])
-		if logged_in?
-			if current_user == request.host
-				request.destroy
-				redirect_to requests_path
-			else
-				redirect_to login_path
-			end
-		else
-			redirect_to login_path
-		end
+	private
+	def request_params 
+		params.require(:request).permit(:active)
 	end
 end
