@@ -1,11 +1,11 @@
-<%= video_tag "nature.mp4", :autoplay => true, :loop => true, muted: true , :class => "home-page-video"%>
+<div data-div-type="video"><%= video_tag "nature.mp4", :autoplay => true, :loop => true, muted: true , :class => "home-page-video"%>
 <h1 class="header">WannaWatch.com</h1>
 <%= form_tag(root_path, :method => "get", id: "search-form") do %>
 	<%= text_field_tag :location, params[:location], placeholder: "Search for Location" %>
 	<%= text_field_tag :show, params[:show], placeholder: "Search for Shows" %>
 	<%= submit_tag "Search" %>
 <%end%>
-
+</div>
 <div class = "users_partial" data-div-type = "users_partial">
 	<%= render partial:'/users/register', layout: false %>
 </div>
