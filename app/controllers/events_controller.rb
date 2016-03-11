@@ -38,6 +38,8 @@ class EventsController < ApplicationController
 
 
   def destroy
+    Event.delete(params[:id])
+    redirect_to current_user
   end
 
   private
