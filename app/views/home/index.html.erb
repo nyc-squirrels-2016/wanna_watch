@@ -1,4 +1,27 @@
-<video width="100%", height="33%", autoplay loop controls muted>
-	<source src="/../../../../videos/nature.mp4" type="video/mp4" />
-	Your browser does not support the video tag
-</video>
+<%= video_tag "nature.mp4", :autoplay => true, :loop => true, muted: true , :class => "home-page-video"%>
+<h1 class="header">WannaWatch.com</h1>
+<%= form_tag(root_path, :method => "get", id: "search-form") do %>
+	<%= text_field_tag :location, params[:location], placeholder: "Search for Location" %>
+	<%= text_field_tag :show, params[:show], placeholder: "Search for Shows" %>
+	<%= submit_tag "Search" %>
+<%end%>
+
+
+<div class="description1">
+	<img class = "home-image" src="http://cdn.home-designing.com/wp-content/uploads/2012/05/Modern-Black-white-living-room-furniture.jpeg" />
+	<p>
+		Lorem Khaled Ipsum is a major key to success. Surround yourself with angels, positive energy, beautiful people, beautiful souls, clean heart, angel. The key is to drink coconut, fresh coconut, trust me. Look at the sunset, life is amazing, life is beautiful, life is what you make it. Surround yourself with angels. Look at the sunset, life is amazing, life is beautiful, life is what you make it. The key to more success is to get a massage once a week, very important, major key, cloth talk
+	</p>
+</div>
+<div class="description2">
+	<p>
+		Lorem Khaled Ipsum is a major key to success. Surround yourself with angels, positive energy, beautiful people, beautiful souls, clean heart, angel. The key is to drink coconut, fresh coconut, trust me. Look at the sunset, life is amazing, life is beautiful, life is what you make it. Surround yourself with angels. Look at the sunset, life is amazing, life is beautiful, life is what you make it. The key to more success is to get a massage once a week, very important, major key, cloth talk
+	</p>
+	<img class = "home-image" src="http://www.vanderbilt.edu/isss/wp-content/uploads/grocery-store.jpg" />
+</div>
+<div class="description3">
+	<img  id="last-home-img" class = "home-image" src="https://pixabay.com/static/uploads/photo/2015/12/09/17/12/popcorn-1085072_960_720.jpg" />
+	<p>
+		Lorem Khaled Ipsum is a major key to success. Surround yourself with angels, positive energy, beautiful people, beautiful souls, clean heart, angel. The key is to drink coconut, fresh coconut, trust me. Look at the sunset, life is amazing, life is beautiful, life is what you make it. Surround yourself with angels. Look at the sunset, life is amazing, life is beautiful, life is what you make it. The key to more success is to get a massage once a week, very important, major key, cloth talk
+	</p>
+</div>
