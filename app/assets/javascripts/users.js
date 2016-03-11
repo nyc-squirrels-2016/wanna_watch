@@ -6,7 +6,7 @@ var RegisterButton = function(){
       height: 'toggle'
     });
     $('*[data-div-type="video"]').css("opacity", ".4");
-    $('*[data-div-type="register_button"]').unbind("click")
+    Unbinder()
   });
 }
 
@@ -17,6 +17,11 @@ var LoginButton = function(){
       height: 'toggle'
     });
     $('*[data-div-type="video"]').css("opacity", ".4");
-    $('*[data-div-type="login_button"]').unbind("click")
+    Unbinder()
   });
+}
+
+var Unbinder = function(){
+  $('*[data-div-type="login_button"]').unbind("click")
+  $('*[data-div-type="register_button"]').unbind("click")
 }

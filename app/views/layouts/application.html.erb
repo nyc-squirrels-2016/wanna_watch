@@ -12,7 +12,7 @@
       <% if logged_in? %>
       <p><%= link_to "Home", root_path %> | <%= link_to "Logout", logout_path %> | <%= link_to "Profile", user_path(current_user) %></p>
       <%else%>
-			<p> <%= link_to "Home", root_path %> |<span data-div-type="login_button"> <%= link_to "Login", login_path %></span> | <span data-div-type="register_button"><%= link_to "Register", '#' %></span> </p>
+			<p> <%= link_to "Home", root_path %> |<span data-div-type="login_button"> <%= link_to "Login", '#' %></span> | <span data-div-type="register_button"><%= link_to "Register", '#' %></span> </p>
       <%end%>
 
 	</nav>
