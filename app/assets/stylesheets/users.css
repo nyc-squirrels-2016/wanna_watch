@@ -1,8 +1,9 @@
-.users_partial {
 
-}
 
 .users_partial form {
   width: 15em;
-
+  padding: 2em;
+  border: .2em solid black;
+  text-align: center;
+  background-color: grey;
 }

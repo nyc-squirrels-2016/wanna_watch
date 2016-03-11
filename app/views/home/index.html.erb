@@ -6,6 +6,10 @@
 	<%= submit_tag "Search" %>
 <%end%>
 
+<div class = "users_partial" data-div-type = "users_partial">
+	<%= render partial:'/users/register', layout: false %>
+</div>
+
 
 <div class="description1">
 	<img class = "home-image" src="http://cdn.home-designing.com/wp-content/uploads/2012/05/Modern-Black-white-living-room-furniture.jpeg" />
@@ -26,6 +30,4 @@
 	</p>
 </div>
 
-<div class = "users_partial">
-	<%= render partial:'/users/register', layout: false %>
-</div>
+
