@@ -2,5 +2,10 @@
 	<%= f.submit "Accept" %>
 	<%= f.hidden_field :event_id , :value => request.event.id %>
 	<%= f.hidden_field :id , :value => request.id %>
+<%end%>
 
+<%= form_for request, :method => "DELETE" do |f| %>
+	<%= f.submit "Decline" %>
+	<%= f.hidden_field :event_id , :value => request.event.id %>
+	<%= f.hidden_field :id , :value => request.id %>
 <%end%>

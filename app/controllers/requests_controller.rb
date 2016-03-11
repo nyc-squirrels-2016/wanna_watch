@@ -1,14 +1,15 @@
 class RequestsController < ApplicationController
 	def index
-		current_user = User.find(1)
-		@requests = current_user.requests_recieved
+		if logged_in?
+			@requests = current_user.requests_recieved
+		end
 	end
 
 	def create
 		event = Event.find(params[:event_id])
 		request = event.requests.new()
-		if session[:user_id]
-			request.guest_id = session[:user_id]
+		if logged_in?
+			request.guest_id = current_user.id
 			request.save
 			redirect_to event
 		else
@@ -19,9 +20,8 @@ class RequestsController < ApplicationController
 
 	def update
 		request = Request.find(params[:id])
-		if session[:user_id]
-			current_user = User.find(session[:user_id])
-			if current_user = request.host
+		if logged_in?
+			if current_user == request.host
 				request.update(active: 0)
 				redirect_to requests_path
 			else
@@ -34,11 +34,10 @@ class RequestsController < ApplicationController
 
 	def destroy
 		request = Request.find(params[:id])
-		if session[:user_id]
-			current_user = User.find(session[:user_id])
-			if current_user = request.host
+		if logged_in?
+			if current_user == request.host
 				request.destroy
-				redirect_to request.event
+				redirect_to requests_path
 			else
 				redirect_to login_path
 			end

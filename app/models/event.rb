@@ -1,7 +1,7 @@
 class Event < ActiveRecord::Base
   belongs_to :host, class_name: :User
-  has_many :requests
-  has_many :guests, through: :requests
+  has_many :requests, dependent: :destroy
+  has_many :guests, through: :requests, dependent: :destroy
 
   validates :shows, presence: true
   validates :address, presence: true
