@@ -1,11 +1,17 @@
-<%= video_tag "nature.mp4", :autoplay => true, :loop => true, muted: true , :class => "home-page-video"%>
+<div data-div-type="video"><%= video_tag "nature.mp4", :autoplay => true, :loop => true, muted: true , :class => "home-page-video"%>
 <h1 class="header">WannaWatch.com</h1>
 <%= form_tag(root_path, :method => "get", id: "search-form") do %>
 	<%= text_field_tag :location, params[:location], placeholder: "Search for Location" %>
 	<%= text_field_tag :show, params[:show], placeholder: "Search for Shows" %>
 	<%= submit_tag "Search" %>
 <%end%>
-
+</div>
+<div class = "users_partial" data-div-type = "users_partial">
+	<%= render partial:'/users/register', layout: false %>
+</div>
+<div class = "users_partial" data-div-type = "login_partial">
+	<%= render partial:'/users/login', layout: false %>
+</div>
 
 <div class="description1">
 	<img class = "home-image" src="http://cdn.home-designing.com/wp-content/uploads/2012/05/Modern-Black-white-living-room-furniture.jpeg" />
@@ -25,3 +31,5 @@
 		Lorem Khaled Ipsum is a major key to success. Surround yourself with angels, positive energy, beautiful people, beautiful souls, clean heart, angel. The key is to drink coconut, fresh coconut, trust me. Look at the sunset, life is amazing, life is beautiful, life is what you make it. Surround yourself with angels. Look at the sunset, life is amazing, life is beautiful, life is what you make it. The key to more success is to get a massage once a week, very important, major key, cloth talk
 	</p>
 </div>
+
+

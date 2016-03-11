@@ -14,5 +14,7 @@
 //= require jquery_ujs
 //= require foundation
 //= require_tree .
+//= require users.js
+//= require runner.js
 
 $(function(){ $(document).foundation(); });
