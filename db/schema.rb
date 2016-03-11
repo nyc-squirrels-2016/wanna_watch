@@ -17,9 +17,7 @@ ActiveRecord::Schema.define(version: 20160311152153) do
   enable_extension "plpgsql"
 
   create_table "events", force: :cascade do |t|
-    t.string   "shows",         null: false
-    t.string   "address",       null: false
-    t.string   "location",      null: false
+    t.string   "show",          null: false
     t.time     "time",          null: false
     t.date     "date",          null: false
     t.integer  "host_id",       null: false
@@ -29,8 +27,7 @@ ActiveRecord::Schema.define(version: 20160311152153) do
     t.datetime "updated_at",    null: false
   end
 
-  add_index "events", ["location"], name: "index_events_on_location", using: :btree
-  add_index "events", ["shows"], name: "index_events_on_shows", using: :btree
+  add_index "events", ["show"], name: "index_events_on_show", using: :btree
 
   create_table "requests", force: :cascade do |t|
     t.integer  "active",     default: 1
@@ -48,10 +45,13 @@ ActiveRecord::Schema.define(version: 20160311152153) do
     t.string   "last_name",       null: false
     t.string   "about_me"
     t.string   "phone_number"
+    t.string   "address",         null: false
+    t.string   "location",        null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
 
+  add_index "users", ["location"], name: "index_users_on_location", using: :btree
   add_index "users", ["username"], name: "index_users_on_username", using: :btree
 
 end
