@@ -1,4 +1,6 @@
-<%= form_for @request do |f| %>
-	<%= f.submit %>
-	<%= f.hidden_field :event_id , :value => event.id %>
+<%= form_for request do |f| %>
+	<%= f.submit "Accept" %>
+	<%= f.hidden_field :event_id , :value => request.event.id %>
+	<%= f.hidden_field :id , :value => request.id %>
+
 <%end%>

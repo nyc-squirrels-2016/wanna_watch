@@ -1,11 +1,7 @@
 class RequestsController < ApplicationController
 	def index
-		if session[:user_id]
-			current_user = User.find(session[:user_id])
-			@requests = current_user.requests_recieved
-		else
-			redirect_to login_path
-		end
+		current_user = User.find(1)
+		@requests = current_user.requests_recieved
 	end
 
 	def create
@@ -27,7 +23,7 @@ class RequestsController < ApplicationController
 			current_user = User.find(session[:user_id])
 			if current_user = request.host
 				request.update(active: 0)
-				redirect_to request.event
+				redirect_to requests_path
 			else
 				redirect_to login_path
 			end

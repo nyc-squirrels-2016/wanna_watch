@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   def requests_recieved
   	requests_recieved = []
   	self.events.each do |event|
-  		requests_recieved.push(event.requests)
+  		requests_recieved.push(event.requests.where(active: 1))
   	end
   	requests_recieved.flatten
   end
