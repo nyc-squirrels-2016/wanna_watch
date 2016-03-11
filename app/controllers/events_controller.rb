@@ -23,10 +23,19 @@ class EventsController < ApplicationController
   end
 
   def edit
+    @event = Event.find(params[:id])
+    render "_edit_event", layout: false
   end
 
   def update
+    @event = Event.find(params[:id])
+    if @event.update(event_params)
+      redirect_to @event
+    else
+      redirect_to @event
+    end
   end
+
 
   def destroy
   end
