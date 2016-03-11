@@ -40,5 +40,14 @@
   width: 20%;
   height: 20%;
   float: right;
-  display: block;
+  display: relative;
+}
+
+.host p {
+  margin-left: 1000px;
+  font-weight: bold;
+  font-size: 200%;
+  font-family: Helvetica;
+  color: black;
+  word-spacing: 10px;
 }
