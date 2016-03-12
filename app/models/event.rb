@@ -20,4 +20,13 @@ class Event < ActiveRecord::Base
   def filled?
   	self.max_occupancy <= self.attending_guests.length
   end
+
+  def self.search(location, show=nil)
+    if show
+      Event.all.select {|event| event.host.location == location && event.show == show && event.filled? == false}
+    else
+      Event.all.select {|event| event.host.location == location && event.filled? == false}
+    end
+  end
+
 end

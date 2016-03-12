@@ -1,5 +1,11 @@
 class EventsController < ApplicationController
   def index
+    @request = Request.new
+    if params[:show] != ""
+      @events = Event.search(params[:location], params[:show])
+    else
+      @events = Event.search(params[:location])
+    end
   end
 
   def new

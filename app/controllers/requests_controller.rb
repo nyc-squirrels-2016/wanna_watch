@@ -12,7 +12,7 @@ class RequestsController < ApplicationController
 	end
 
 	def create
-		event = Event.find(params[:event_id])
+		event = Event.find(params[:request][:event_id])
 		request = event.requests.new()
 		if logged_in?
 			request.guest_id = current_user.id
