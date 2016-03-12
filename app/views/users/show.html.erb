@@ -29,4 +29,24 @@
 
   </div>
 
+  <div class= "upcoming-events">
+  <header class="box-header">
+    <h5 class=" box-header-title"><img class="calendar" src="../../imgs/calendar.png" /> Hosted Events</h5>
+  </header>
+    <% @user.events.each do |event| %>
+
+    <p><%= event.date.month %>/<%= event.date.day %>/<%= event.date.year %> <%= event.time.hour %>:<%= event.time.min %></p>
+    <p><%= event.show %></p>
+    <p><%= event.host.location %></p>
+    <p><%= event.host.address %></p>
+     <div class= "card-actions">
+      <ul class= "event-show">
+       <a href="/events/<%=event.id%>"> <img class="read-more" src="../../imgs/read_more_button.png" /></a>
+      </ul>
+    </div>
+    <hr >
+    <% end %>
+
+  </div>
+
 </div>

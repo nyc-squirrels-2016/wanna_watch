@@ -8,12 +8,17 @@
 	  <% @events.each do |event| %>
 
 	  <p><%= event.date.month %>/<%= event.date.day %>/<%= event.date.year %> <%= event.time.hour %>:<%= event.time.min %></p>
-	  <p><%= event.show %></p>
-	  <p><%= event.host.location %></p>
-	  <p><%= event.host.address %></p>
-	  <%= form_for @request do |f| %>
-	  	<%= f.hidden_field :event_id, :value => event.id %>
-	  	<%= f.submit "Send a Request"%>
+	  <p>Show: <%= event.show %></p>
+	  <p>Location: <%= event.host.location %></p>
+	  <p>Address: <%= event.host.address %></p>
+	  <p>Host Name: <%= event.host.first_name%> <%= event.host.last_name%></p>
+	  <%if logged_in? %>
+	  	<%if event.has_no_user_requests(current_user.id)%>
+			  <%= form_for @request do |f| %>
+			  	<%= f.hidden_field :event_id, :value => event.id %>
+			  	<%= f.submit "Send a Request"%>
+			  <%end%>
+		<%end%>
 	  <%end%>
 	   <div class= "card-actions">
 	    <ul class= "event-show">
@@ -25,4 +30,6 @@
 
 	</div>
 </div>
+<%else%>
+	<h1 class="h1-title">Sorry but there are no events</h1>
 <%end%>

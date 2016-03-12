@@ -9,19 +9,27 @@ class EventsController < ApplicationController
   end
 
   def new
-    @event = Event.new
-    render "_new_event", layout: false
+    if logged_in?
+      @event = Event.new
+      render "_new_event", layout: false
+    else
+      redirect_to root_path
+    end
   end
 
   def create
-    @user = current_user
-    @event = Event.new(event_params)
-    @event.host_id = @user.id
-      if @event.save
-        redirect_to @event
-      else
-        redirect_to @user
-      end
+    if logged_in?
+      @user = current_user
+      @event = Event.new(event_params)
+      @event.host_id = @user.id
+        if @event.save
+          redirect_to @event
+        else
+          redirect_to @user
+        end
+    else
+      redirect_to root_path
+    end
   end
 
   def show
@@ -29,23 +37,48 @@ class EventsController < ApplicationController
   end
 
   def edit
-    @event = Event.find(params[:id])
-    render "_edit_event", layout: false
+    if logged_in?
+      @event = Event.find(params[:id])
+      if @event.host == current_user
+        render "_edit_event", layout: false
+      else
+        redirect_to @event
+      end
+    else
+      redirect_to root_path
+    end
   end
 
   def update
-    @event = Event.find(params[:id])
-    if @event.update(event_params)
-      redirect_to @event
+    if logged_in?
+      @event = Event.find(params[:id])
+      if @event.host == current_user
+        if @event.update(event_params)
+          redirect_to @event
+        else
+          redirect_to @event
+        end
+      else
+        redirect_to @event
+      end
     else
-      redirect_to @event
+      redirect_to root_path
     end
   end
 
 
   def destroy
-    Event.delete(params[:id])
-    redirect_to current_user
+    if logged_in?
+      @event = Event.find(params[:id])
+      if @event.host == current_user
+        @event.destroy
+        redirect_to current_user
+      else
+        redirect_to @event
+      end
+    else
+      redirect_to root_path
+    end
   end
 
   private
