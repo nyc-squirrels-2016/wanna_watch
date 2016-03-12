@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160311152153) do
+ActiveRecord::Schema.define(version: 20160312001839) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,17 +38,25 @@ ActiveRecord::Schema.define(version: 20160311152153) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "username",        null: false
+    t.string   "username",                             null: false
     t.string   "password_digest"
-    t.string   "email",           null: false
-    t.string   "first_name",      null: false
-    t.string   "last_name",       null: false
+    t.string   "email",                                null: false
+    t.string   "first_name",                           null: false
+    t.string   "last_name",                            null: false
     t.string   "about_me"
     t.string   "phone_number"
-    t.string   "address",         null: false
-    t.string   "location",        null: false
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "address",                              null: false
+    t.string   "location",                             null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+    t.string   "profile_picture_file_name"
+    t.string   "profile_picture_content_type"
+    t.integer  "profile_picture_file_size"
+    t.datetime "profile_picture_updated_at"
+    t.string   "where_you_watch_picture_file_name"
+    t.string   "where_you_watch_picture_content_type"
+    t.integer  "where_you_watch_picture_file_size"
+    t.datetime "where_you_watch_picture_updated_at"
   end
 
   add_index "users", ["location"], name: "index_users_on_location", using: :btree
