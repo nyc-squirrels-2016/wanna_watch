@@ -1,5 +1,5 @@
 
-<%= form_for (User.new, multipart: true) do |f| %>
+<%= form_for User.new, :html =>{multipart: true} do |f| %>
   <p><%=f.text_field :email, placeholder: "email" %></p>
   <p><%=f.text_field :first_name, placeholder: "first name"%></p>
   <p><%=f.text_field :last_name, placeholder: "last name"%></p>
