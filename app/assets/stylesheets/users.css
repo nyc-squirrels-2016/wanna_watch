@@ -26,6 +26,10 @@
   left: 0;
 }
 
+.apt-photo {
+  border-radius: 50%;
+}
+
 .calendar {
   height: 5%;
   width: 5%;
