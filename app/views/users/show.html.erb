@@ -2,7 +2,7 @@
 <div class= "container">
 
   <div class= "profile-description">
-    <img class= "profile-pic" src="../../imgs/user.jpg">
+    <%=image_tag(@user.profile_picture.url(:square), :class => "profile-pic")%>
 
     <h4><%= @user.first_name %> <%= @user.last_name %></h4>
     <h5><%= @user.location %></h5> <p><button data-div-type="new_event_button">New Event</button></p>
