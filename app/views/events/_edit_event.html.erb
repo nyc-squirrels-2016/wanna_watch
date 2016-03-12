@@ -1,9 +1,9 @@
-<%= form_for @event do |f| %>
-  <p><%=f.text_field :show, value: @event.show %></p>
+<%= form_for event do |f| %>
+  <p><%=f.text_field :show, value: event.show %></p>
   <p><%=f.number_field :max_occupancy, placeholder: "Number of available seats" %>
-  <p><%=f.text_field :description, placeholder: "Any other info?" %>
+  <p><%=f.text_area :description, placeholder: "Any other info?" %>
   <p><%=f.time_select :time, placeholder: "time"%></p>
   <p><%=f.date_select :date, placeholder: "date"%></p>
- <p> <%= f.submit "Create Event"%> </p>
+ <p> <%= f.submit "Update Event"%> </p>
 
 <%end%>
