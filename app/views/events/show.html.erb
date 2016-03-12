@@ -2,7 +2,7 @@
 <div class= "wrapper">
 
 <div class="apartment">
-  <img class="apartment-photo" src="../../imgs/apartment.jpg" />
+  <%=image_tag(@event.host.where_you_watch_picture.url(:square), :class => "apartment-photo")%>
   <h2><%=@event.host.location%></h2>
   <p>We're watching <%= @event.show %> with <%= @event.host.first_name %> <%= @event.host.last_name %></p>
   <p><%=@event.time.hour%>:<%=@event.time.min%></p>
