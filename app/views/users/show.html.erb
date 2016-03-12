@@ -5,12 +5,12 @@
     <img class= "profile-pic" src="../../imgs/user.jpg">
 
     <h4><%= @user.first_name %> <%= @user.last_name %></h4>
-    <h5><%= @user.location %></h5> <p><%= link_to "Host a new Event", new_event_path %></p>
+    <h5><%= @user.location %></h5> <p><button data-div-type="new_event_button">New Event</button></p>
   </div>
   <div class="profile-description2">
     <p><span>About Me: </span> <%= @user.about_me %></p>
   </div>
-  <div class = "users_partial" data-div-type = "edit_event_partial">
+  <div class = "users_partial" data-div-type = "new_events_partial">
     <%= render partial:'/events/new_event', layout: false%>
   </div>
   <div class= "upcoming-events">
@@ -33,7 +33,7 @@
   <%end%>
   </div>
 
-  <div class= "upcoming-events">
+  <div class= "upcoming-events" id="events-container">
   <header class="box-header">
     <h5 class=" box-header-title"><img class="calendar" src="../../imgs/calendar.png" /> Hosted Events</h5>
   </header>
@@ -44,9 +44,6 @@
     <p><%= event.show %></p>
     <p><%= event.host.location %></p>
     <p><%= event.host.address %></p>
-    <div class = "users_partial" data-div-type = "edit_event_partial">
-      <%= render partial:'/events/edit_event', layout: false, locals: {event: event}%>
-    </div>
     <p><%= link_to "Cancel Event", event_path(event), :method => "DELETE" %>
      <div class= "card-actions">
       <ul class= "event-show">
