@@ -7,7 +7,7 @@ class RequestsController < ApplicationController
 
 	def outings
 		if logged_in?
-			@requests = current_user.requests
+			@requests = current_user.requests.order(:created_at).limit(10)
 		end
 	end
 
