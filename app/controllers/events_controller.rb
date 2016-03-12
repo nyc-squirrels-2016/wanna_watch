@@ -13,7 +13,7 @@ class EventsController < ApplicationController
       @event = Event.new
       render "_new_event", layout: false
     else
-      redirect_to root_path
+      redirect_to root_path, alert: "You need to login"
     end
   end
 
@@ -25,10 +25,10 @@ class EventsController < ApplicationController
         if @event.save
           redirect_to @event
         else
-          redirect_to @user
+          redirect_to @user, alert: @event.errors.full_messages.join(', ')
         end
     else
-      redirect_to root_path
+      redirect_to root_path, alert: "You need to login"
     end
   end
 
@@ -42,10 +42,10 @@ class EventsController < ApplicationController
       if @event.host == current_user
         render "_edit_event", layout: false
       else
-        redirect_to @event
+        redirect_to @event, alert: "You are not authorized to edit this event"
       end
     else
-      redirect_to root_path
+      redirect_to root_path, alert: "You need to login"
     end
   end
 
@@ -56,13 +56,13 @@ class EventsController < ApplicationController
         if @event.update(event_params)
           redirect_to @event
         else
-          redirect_to @event
+          redirect_to @event, alert: @event.errors.full_messages.join(', ')
         end
       else
-        redirect_to @event
+        redirect_to @event, alert: "You are not authorized to edit this event"
       end
     else
-      redirect_to root_path
+      redirect_to root_path, alert: "You need to login"
     end
   end
 
@@ -74,10 +74,10 @@ class EventsController < ApplicationController
         @event.destroy
         redirect_to current_user
       else
-        redirect_to @event
+        redirect_to @event, alert: "You are not authorized to edit this event"
       end
     else
-      redirect_to root_path
+      redirect_to root_path, alert: "You need to login"
     end
   end
 

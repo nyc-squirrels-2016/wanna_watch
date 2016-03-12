@@ -39,6 +39,7 @@
     <p><%= event.show %></p>
     <p><%= event.host.location %></p>
     <p><%= event.host.address %></p>
+    <p><%= link_to "Edit Event", edit_event_path(event)%>
      <div class= "card-actions">
       <ul class= "event-show">
        <a href="/events/<%=event.id%>"> <img class="read-more" src="../../imgs/read_more_button.png" /></a>

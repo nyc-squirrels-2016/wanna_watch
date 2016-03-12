@@ -6,7 +6,7 @@ class SessionsController<ApplicationController
       session[:user_id] = @user.id
       redirect_to @user
     else
-      redirect_to root_path
+      redirect_to root_path, alert: "Incorrect Username or Password"
     end
   end
 
