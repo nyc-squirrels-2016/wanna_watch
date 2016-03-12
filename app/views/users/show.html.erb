@@ -15,8 +15,8 @@
   <header class="box-header">
     <h5 class=" box-header-title"><img class="calendar" src="../../imgs/calendar.png" /> Upcoming Events</h5>
   </header>
+  <% if @user.requests_approved.any? %>
     <% @user.requests_approved.each do |event| %>
-
     <p><%= event.date.month %>/<%= event.date.day %>/<%= event.date.year %> <%= event.time.hour %>:<%= event.time.min %></p>
     <p><%= event.show %></p>
     <p><%= event.host.location %></p>
@@ -28,13 +28,14 @@
     </div>
     <hr >
     <% end %>
-
+  <%end%>
   </div>
 
   <div class= "upcoming-events">
   <header class="box-header">
     <h5 class=" box-header-title"><img class="calendar" src="../../imgs/calendar.png" /> Hosted Events</h5>
   </header>
+  <% if @user.events.any? %>
     <% @user.events.each do |event| %>
 
     <p><%= event.date.month %>/<%= event.date.day %>/<%= event.date.year %> <%= event.time.hour %>:<%= event.time.min %></p>
@@ -50,6 +51,7 @@
     </div>
     <hr >
     <% end %>
+  <%end%>
 
   </div>
 

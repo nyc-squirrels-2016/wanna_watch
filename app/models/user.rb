@@ -37,6 +37,6 @@ class User < ActiveRecord::Base
         request.event
       end
     end
-    events
+    events.compact
   end
 end
