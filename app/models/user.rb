@@ -7,6 +7,19 @@ class User < ActiveRecord::Base
   validates :location, presence: true
   validates :address, presence: true
 
+  has_attached_file :profile_picture, styles: {
+    thumb: '100x100>',
+    square: '200x200#',
+    medium: '300x300>'
+  }
+  validates_attachment_content_type :profile_picture, :content_type => /\Aimage\/.*\Z/
+
+  has_attached_file :where_you_watch_picture, styles: {
+    thumb: '100x100>',
+    square: '200x200#',
+    medium: '300x300>'
+  }
+  validates_attachment_content_type :where_you_watch_picture, :content_type => /\Aimage\/.*\Z/
 
   has_secure_password
 
@@ -18,7 +31,7 @@ class User < ActiveRecord::Base
   	requests_recieved.flatten
   end
 
-  def requests_approved 
+  def requests_approved
     events = self.requests.where(active: 0).map do |request|
       request.event
     end
