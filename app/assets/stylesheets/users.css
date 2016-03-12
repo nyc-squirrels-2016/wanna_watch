@@ -26,6 +26,12 @@
   left: 0;
 }
 
+.apt-photo {
+  width: 15%;
+  height: 15%;
+  float: left;
+}
+
 .calendar {
   height: 5%;
   width: 5%;

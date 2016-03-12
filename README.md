@@ -1,12 +1,12 @@
 ####Table of Contents
-1. [Features](#features)  
-  a) [MVP features](#MVP)  
-  b) [Stretch Features](#stretch)  
-  c) [Nice to Have Features](#nice)  
-2. [Time Allocation](#time)  
-3. [Working Agreement](#working)  
-4. [Team Designations](#team)  
-5. [Git Rules](#git)  
+1. [Features](#features)
+  a) [MVP features](#MVP)
+  b) [Stretch Features](#stretch)
+  c) [Nice to Have Features](#nice)
+2. [Time Allocation](#time)
+3. [Working Agreement](#working)
+4. [Team Designations](#team)
+5. [Git Rules](#git)
 
 <a name="features"></a>
 ####Features
@@ -41,7 +41,7 @@
 6. Guest can search by location (bourough)
   a) Fill out form after initial show form is filled out. This form is brought up by AJAX.
   b) Pull up page for search results
-7. Guest can request to watch a show with host. They can add a message with their request.
+7. Guest can request to watch a show with host. They can add a message with their request. (MESSAGING NOT PART OF MVP)
   a) Message and submit with AJAX
 8. Hosts & Guests can message each other once a request has been made.
   a) Accept / Decline / Message
