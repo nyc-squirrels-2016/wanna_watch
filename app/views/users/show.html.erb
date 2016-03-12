@@ -5,7 +5,7 @@
     <img class= "profile-pic" src="../../imgs/user.jpg">
 
     <h4><%= @user.first_name %> <%= @user.last_name %></h4>
-    <h5><%= @user.location %></h5>
+    <h5><%= @user.location %></h5> <p><%= link_to "Host a new Event", new_event_path %></p>
   </div>
 
 
