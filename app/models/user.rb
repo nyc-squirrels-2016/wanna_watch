@@ -14,12 +14,12 @@ class User < ActiveRecord::Base
   }
   validates_attachment_content_type :profile_picture, :content_type => /\Aimage\/.*\Z/
 
-  has_attached_file :where_you_watch_picture, styles: {
-    thumb: '100x100>',
-    square: '200x200#',
-    medium: '300x300>'
-  }
-  validates_attachment_content_type :where_you_watch_picture, :content_type => /\Aimage\/.*\Z/
+  # has_attached_file :where_you_watch_picture, styles: {
+  #   thumb: '100x100>',
+  #   square: '200x200#',
+  #   medium: '300x300>'
+  # }
+  # validates_attachment_content_type :where_you_watch_picture, :content_type => /\Aimage\/.*\Z/
 
   has_secure_password
 
