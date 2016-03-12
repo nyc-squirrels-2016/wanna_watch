@@ -1,13 +1,13 @@
 
-<%= form_for User.new, :html =>{multipart: true} do |f| %>
+<%= form_for(User.new, multipart: true) do |f| %>
   <p><%=f.text_field :email, placeholder: "email" %></p>
   <p><%=f.text_field :first_name, placeholder: "first name"%></p>
   <p><%=f.text_field :last_name, placeholder: "last name"%></p>
   <p><%=f.text_field :username, placeholder: "username" %></p>
   <p><%=f.select :location, [["Brooklyn"],["Manhattan"],["Queens"], ["Staten Island"], ["Bronx"]] %></p>
   <p><%=f.text_field :address, placeholder: "address" %></p>
-  <p><%=f.label :upload_profile_picture %>
-  <%=f.file_field :profile_picture %></p>
+  <p><%=f.label :upload_profile_picture %></p>
+  <p><%=f.file_field :profile_picture %>
   <p><%=f.password_field :password, placeholder: "password" %></p>
 
 
