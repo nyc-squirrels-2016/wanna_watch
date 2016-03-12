@@ -2,8 +2,17 @@
   <p><%=f.text_field :show, placeholder: "Whatcha watchin?" %></p>
   <p><%=f.number_field :max_occupancy, placeholder: "Number of available seats" %>
   <p><%=f.text_area :description, placeholder: "Any other info?" %>
-  <p><%=f.time_select :time, placeholder: "time"%></p>
-  <p><%=f.date_select :date, placeholder: "date"%></p>
+  <p><%= f.time_select :time,
+  :combined => true,
+  :default => Time.now.change(:hour => 19, :min => 00),
+  :discard_minute => true,
+  :time_separator => "",
+  :start_hour => 0,
+  :start_minute => 00,
+  :end_hour => 24,
+  :end_minute => 30,
+  :ampm => true %></p>
+  <p><%=f.date_select :date %></p>
  <p> <%= f.submit "Create Event"%> </p>
 
 <%end%>
