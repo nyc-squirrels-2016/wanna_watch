@@ -1,5 +1,14 @@
 require 'rails_helper'
-
-RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe User do
+  context "validations" do
+    it { should validate_presence_of :username }
+    it { should allow_value('poliphant').for(:username) }
+    it { should validate_presence_of :email }
+    it { should allow_value('poliphant@example.com').for(:email) }
+    it { should_not allow_value('poliphant.example.com').for(:email) }
+    it { should validate_presence_of :location }
+    it { should validate_presence_of :address }
+  end
 end
+
+
