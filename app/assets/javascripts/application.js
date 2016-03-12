@@ -15,6 +15,7 @@
 //= require foundation
 //= require_tree .
 //= require users.js
+//= require events.js
 //= require runner.js
 
 $(function(){ $(document).foundation(); });

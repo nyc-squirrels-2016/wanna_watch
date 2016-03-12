@@ -32,9 +32,11 @@ class User < ActiveRecord::Base
   end
 
   def requests_approved
-    events = self.requests.where(active: 0).map do |request|
-      request.event
+    events = self.requests.where(active: 0 ).map do |request|
+      if request.event.date > Time.now
+        request.event
+      end
     end
-    events
+    events.compact
   end
 end

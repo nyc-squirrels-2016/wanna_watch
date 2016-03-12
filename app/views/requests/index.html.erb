@@ -1,4 +1,4 @@
-<% if @requests %>
+<% if @requests.any? %>
 	<% @requests.each do |request| %>
 		<div class="requests-recieved">
 			<div class="request-form">
@@ -15,4 +15,6 @@
 			<img class="request-image" src="http://placehold.it/350x350"/>
 		</div>
 	<%end%>
+<%else%>
+	<h1 class="h1-title">You have no requests</h1>
 <%end%>

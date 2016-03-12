@@ -29,4 +29,8 @@ class Event < ActiveRecord::Base
     end
   end
 
+  def has_no_user_requests(user_id)
+    self.guests.where(id: user_id).size < 1 
+  end
+
 end

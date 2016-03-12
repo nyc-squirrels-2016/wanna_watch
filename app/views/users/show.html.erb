@@ -5,16 +5,20 @@
     <img class= "profile-pic" src="../../imgs/user.jpg">
 
     <h4><%= @user.first_name %> <%= @user.last_name %></h4>
-    <h5><%= @user.location %></h5> <p><%= link_to "Host a new Event", new_event_path %></p>
+    <h5><%= @user.location %></h5> <p><button data-div-type="new_event_button">New Event</button></p>
   </div>
-
-
+  <div class="profile-description2">
+    <p><span>About Me: </span> <%= @user.about_me %></p>
+  </div>
+  <div class = "users_partial" data-div-type = "new_events_partial">
+    <%= render partial:'/events/new_event', layout: false%>
+  </div>
   <div class= "upcoming-events">
   <header class="box-header">
     <h5 class=" box-header-title"><img class="calendar" src="../../imgs/calendar.png" /> Upcoming Events</h5>
   </header>
+  <% if @user.requests_approved.any? %>
     <% @user.requests_approved.each do |event| %>
-
     <p><%= event.date.month %>/<%= event.date.day %>/<%= event.date.year %> <%= event.time.hour %>:<%= event.time.min %></p>
     <p><%= event.show %></p>
     <p><%= event.host.location %></p>
@@ -26,6 +30,29 @@
     </div>
     <hr >
     <% end %>
+  <%end%>
+  </div>
+
+  <div class= "upcoming-events" id="events-container">
+  <header class="box-header">
+    <h5 class=" box-header-title"><img class="calendar" src="../../imgs/calendar.png" /> Hosted Events</h5>
+  </header>
+  <% if @user.events.any? %>
+    <% @user.events.each do |event| %>
+
+    <p><%= event.date.month %>/<%= event.date.day %>/<%= event.date.year %> <%= event.time.hour %>:<%= event.time.min %></p>
+    <p><%= event.show %></p>
+    <p><%= event.host.location %></p>
+    <p><%= event.host.address %></p>
+    <p><%= link_to "Cancel Event", event_path(event), :method => "DELETE" %>
+     <div class= "card-actions">
+      <ul class= "event-show">
+       <a href="/events/<%=event.id%>"> <img class="read-more" src="../../imgs/read_more_button.png" /></a>
+      </ul>
+    </div>
+    <hr >
+    <% end %>
+  <%end%>
 
   </div>
 
