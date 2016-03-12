@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   validates :location, presence: true
   validates :address, presence: true
 
-  has_attached_file :profile_picture, styles: {
+  has_attached_file :profile_picture, :storage => :s3, styles: {
     thumb: '100x100>',
     square: '200x200#',
     medium: '300x300>'
