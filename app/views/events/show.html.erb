@@ -9,7 +9,7 @@
   <p><%=@event.date.month %> / <%=@event.date.day %> / <%=@event.date.year %></p>
 
 <div class="host">
-    <img class="host-photo" src="../../imgs/user.jpg" />
+    <%=image_tag(@event.host.profile_picture.url(:square), :class => "host-photo")%>
  </div>
 
 
@@ -24,16 +24,16 @@
 <div class="attending_button">
 	<%if @event.attending_guests%>
 		<%@event.attending_guests.each do |guest| %>
-			<div class="guest-attending"> 
+			<div class="guest-attending">
 				<div class="guest-text">
 					<p><%= guest.first_name %> <%= guest.last_name%> is Attending!</p>
 				</div>
-				<img class="guest-image" src="../../imgs/person1.png" />
+        <%=image_tag(guest.profile_picture.url(:square), :class => "guest-image")%>
 			</div>
 		<%end%>
 	<%else%>
 		<%@event.max_occupancy.times do |guest| %>
-			<div class="guest-attending"> 
+			<div class="guest-attending">
 				<div class="guest-text">
 					<p>Empty Slot available</p>
 				</div>
@@ -42,7 +42,7 @@
 		<%end%>
 	<%end%>
 	<%(@event.max_occupancy - @event.attending_guests.size).times do |guest| %>
-		<div class="guest-attending"> 
+		<div class="guest-attending">
 			<div class="guest-text">
 				<p>Empty Slot available</p>
 			</div>
