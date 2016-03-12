@@ -31,6 +31,23 @@
 				<img class="guest-image" src="../../imgs/person1.png" />
 			</div>
 		<%end%>
+	<%else%>
+		<%@event.max_occupancy.times do |guest| %>
+			<div class="guest-attending"> 
+				<div class="guest-text">
+					<p>Empty Slot available</p>
+				</div>
+				<img class="guest-image" src="http://placehold.it/350x350" />
+			</div>
+		<%end%>
+	<%end%>
+	<%(@event.max_occupancy - @event.attending_guests.size).times do |guest| %>
+		<div class="guest-attending"> 
+			<div class="guest-text">
+				<p>Empty Slot available</p>
+			</div>
+			<img class="guest-image" src="http://placehold.it/350x350" />
+		</div>
 	<%end%>
 </div>
 

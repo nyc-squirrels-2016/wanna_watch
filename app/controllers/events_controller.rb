@@ -2,26 +2,34 @@ class EventsController < ApplicationController
   def index
     @request = Request.new
     if params[:show] != ""
-      @events = Event.search(params[:location], params[:show])
+      @events = Event.where("date > ? ", Time.now).search(params[:location], params[:show])
     else
-      @events = Event.search(params[:location])
+      @events = Event.where("date > ? ", Time.now).search(params[:location])
     end
   end
 
   def new
-    @event = Event.new
-    render "_new_event", layout: false
+    if logged_in?
+      @event = Event.new
+      render "_new_event", layout: false
+    else
+      redirect_to root_path, alert: "You need to login"
+    end
   end
 
   def create
-    @user = current_user
-    @event = Event.new(event_params)
-    @event.host_id = @user.id
-      if @event.save
-        redirect_to @event
-      else
-        redirect_to @user
-      end
+    if logged_in?
+      @user = current_user
+      @event = Event.new(event_params)
+      @event.host_id = @user.id
+        if @event.save
+          redirect_to @event
+        else
+          redirect_to @user, alert: @event.errors.full_messages.join(', ')
+        end
+    else
+      redirect_to root_path, alert: "You need to login"
+    end
   end
 
   def show
@@ -29,23 +37,48 @@ class EventsController < ApplicationController
   end
 
   def edit
-    @event = Event.find(params[:id])
-    render "_edit_event", layout: false
+    if logged_in?
+      @event = Event.find(params[:id])
+      if @event.host == current_user
+        render "_edit_event", layout: false
+      else
+        redirect_to @event, alert: "You are not authorized to edit this event"
+      end
+    else
+      redirect_to root_path, alert: "You need to login"
+    end
   end
 
   def update
-    @event = Event.find(params[:id])
-    if @event.update(event_params)
-      redirect_to @event
+    if logged_in?
+      @event = Event.find(params[:id])
+      if @event.host == current_user
+        if @event.update(event_params)
+          redirect_to @event
+        else
+          redirect_to @event, alert: @event.errors.full_messages.join(', ')
+        end
+      else
+        redirect_to @event, alert: "You are not authorized to edit this event"
+      end
     else
-      redirect_to @event
+      redirect_to root_path, alert: "You need to login"
     end
   end
 
 
   def destroy
-    Event.delete(params[:id])
-    redirect_to current_user
+    if logged_in?
+      @event = Event.find(params[:id])
+      if @event.host == current_user
+        @event.destroy
+        redirect_to current_user
+      else
+        redirect_to @event, alert: "You are not authorized to edit this event"
+      end
+    else
+      redirect_to root_path, alert: "You need to login"
+    end
   end
 
   private

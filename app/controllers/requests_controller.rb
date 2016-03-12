@@ -7,7 +7,7 @@ class RequestsController < ApplicationController
 
 	def outings
 		if logged_in?
-			@requests = current_user.requests
+			@requests = current_user.requests.order(:created_at).limit(10)
 		end
 	end
 
@@ -15,11 +15,15 @@ class RequestsController < ApplicationController
 		event = Event.find(params[:request][:event_id])
 		request = event.requests.new()
 		if logged_in?
-			request.guest_id = current_user.id
-			request.save
-			redirect_to event
+			if event.has_no_user_requests(current_user.id)
+				request.guest_id = current_user.id
+				request.save
+				redirect_to event
+			else
+				redirect_to event
+			end
 		else
-			redirect_to login_path
+			redirect_to root_path
 		end
 	end
 
@@ -31,10 +35,10 @@ class RequestsController < ApplicationController
 				request.update(request_params)
 				redirect_to requests_path
 			else
-				redirect_to login_path
+				redirect_to root_path
 			end
 		else
-			redirect_to login_path
+			redirect_to root_path
 		end
 	end
 
