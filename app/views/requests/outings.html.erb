@@ -16,7 +16,7 @@
 				<p>Name of Host: <%= request.host.first_name%> <%= request.host.last_name %></p>
 				<p>About your Host: <%= request.host.about_me %></p>
 			</div>
-			<img class="request-image" src="http://placehold.it/350x350"/>
+			<%=image_tag(request.event.host.where_you_watch_picture.url(:square), :class => "request-image" ) %>
 		</div>
 	<%end%>
 <%else%>
