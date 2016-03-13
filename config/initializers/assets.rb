@@ -9,3 +9,7 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
+Rails.application.config.secret_key_base = ENV["SECRET_KEY_BASE"]
+Rails.application.config.AWS_ACCESS_KEY_ID = ENV["AWS_ACCESS_KEY_ID"]
+Rails.application.config.AWS_SECRET_ACCESS_KEY = ENV["AWS_SECRET_ACCESS_KEY"]
+Rails.application.config.S3_BUCKET_NAME = ENV["S3_BUCKET_NAME"]
