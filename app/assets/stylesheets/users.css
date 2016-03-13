@@ -19,22 +19,6 @@
 
 }
 
-.profile-pic {
-  border-radius: 50%;
-  width: 24%;
-  height: 24%;
-  float: left;
-  position: inline;
-  top: 10;
-  left: 0;
-}
-
-.apt-photo {
-  width: 15%;
-  height: 15%;
-  float: left;
-}
-
 .calendar {
   height: 5%;
   width: 5%;
@@ -109,4 +93,66 @@ hr {
 
 .nav-link:hover {
   font-weight: bolder;
+}
+#profile-box {
+  border: .2em solid black;
+  width: 65em;
+  height: 20em;
+  margin-left: 10%;
+  margin-right: 20%;
+  background-color: white;
+  display: inline-flex;
+
+}
+
+#profile-images-container {
+  width: 20em;
+  height: 20em;
+  border-right: .1em solid black;
+  position: relative;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  position: absolute;
+  border: .2em solid white;
+  z-index: 2;
+  top: 7.2em;
+  left: 7.2em;
+}
+
+.button {
+  position: absolute;
+  top: 15em;
+  left: 7.2em;
+  border-radius: 10%;
+}
+
+.apt-photo {
+  width: 20em;
+  height: 19.7em;
+  float: left;
+  position: absolute;
+}
+
+#profile-text-container {
+  width: 45em;
+  text-align: center;
+
+}
+
+#profile-name {
+  font-size: 3em;
+}
+
+#profile-location {
+  font-size: 2em;
+  color: grey;
+}
+
+#events-tabs {
+  text-align: center;
+  color: blue;
 }

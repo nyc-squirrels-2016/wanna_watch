@@ -1,16 +1,16 @@
 
-<div class= "wrapper">
-
-<div class="apartment">
-  <%=image_tag(@event.host.where_you_watch_picture.url(:square), :class => "apartment-photo")%>
-  <h2><%=@event.host.location%></h2>
-  <p>We're watching <%= @event.show %> with <%= @event.host.first_name %> <%= @event.host.last_name %></p>
-  <p><%=@event.time.strftime("%I:%M %p") %></p>
-  <p><%=@event.date.month %> / <%=@event.date.day %> / <%=@event.date.year %></p>
-
-<div class="host">
+<div id= "event_container">
+  <div id = "event_images_container">
+    <%=image_tag(@event.host.where_you_watch_picture.url(:square), :class => "apartment-photo")%>
     <%=image_tag(@event.host.profile_picture.url(:square), :class => "host-photo")%>
- </div>
+  </div>
+  <div id = "event_text_container">
+      <h2><%=@event.show%></h2>
+  <p><span id="hosted_by">Hosted by: <%= @event.host.first_name %> <%= @event.host.last_name %></span></p>
+    <p><%=@event.date.month %> / <%=@event.date.day %> / <%=@event.date.year %></p>
+  <p><%=@event.time.strftime("%I:%M %p") %></p>
+  </div>
+</div>
 
 
 <%if @event.filled? %>
@@ -27,6 +27,7 @@
 			<div class="guest-attending">
 				<div class="guest-text">
 					<p><%= guest.first_name %> <%= guest.last_name%> is Attending!</p>
+          <p><%=guest.about_me%></p>
 				</div>
         <%=image_tag(guest.profile_picture.url(:square), :class => "guest-image")%>
 			</div>
