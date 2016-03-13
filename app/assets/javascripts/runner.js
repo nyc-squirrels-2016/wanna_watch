@@ -5,4 +5,6 @@ $(document).ready(function(){
   ExitNewEventForm()
   ExitLogin()
   ExitRegister()
+  ToggleHostedEvents()
+  ToggleUpcomingEvents()
 })

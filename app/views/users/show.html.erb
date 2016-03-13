@@ -15,7 +15,11 @@
     </div>
   </div>
 
-  <div class= "upcoming-events">
+  <div id = "events-tabs">
+    <p><span data-div-type="hosted_events">Hosted Events</span> | <span data-div-type="upcoming_events">Upcoming Events</span></p>
+  </div>
+
+  <div class= "upcoming-events" data-div-type="upcoming_events_body">
   <header class="box-header">
     <h5 class=" box-header-title"><img class="calendar" src="../../imgs/calendar.png" /> Upcoming Events</h5>
   </header>
@@ -35,7 +39,7 @@
   <%end%>
   </div>
 
-  <div class= "upcoming-events" id="events-container">
+  <div class= "upcoming-events" id="events-container" data-div-type="hosted_events_body">
   <header class="box-header">
     <h5 class=" box-header-title"><img class="calendar" src="../../imgs/calendar.png" /> Hosted Events</h5>
   </header>

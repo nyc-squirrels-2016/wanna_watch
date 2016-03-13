@@ -34,3 +34,17 @@ var ExitNewEventForm = function(){
 var NewUnbinder = function(){
   $('*[data-div-type="new_event_button"]').unbind("click")
 }
+
+var ToggleHostedEvents = function (){
+  $('*[data-div-type="hosted_events"]').click(function(){
+    $('*[data-div-type="hosted_events_body"]').show()
+    $('*[data-div-type="upcoming_events_body"]').hide()
+  });
+}
+
+var ToggleUpcomingEvents = function (){
+  $('*[data-div-type="upcoming_events"]').click(function(){
+    $('*[data-div-type="upcoming_events_body"]').show()
+    $('*[data-div-type="hosted_events_body"]').hide()
+  });
+}
