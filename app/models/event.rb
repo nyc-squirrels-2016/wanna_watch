@@ -23,7 +23,7 @@ class Event < ActiveRecord::Base
 
   def self.search(location, show=nil)
     if show
-      Event.all.select {|event| event.host.location == location && event.show == show && event.filled? == false}
+      Event.all.select {|event| event.host.location == location && event.show.include?(show) && event.filled? == false}
     else
       Event.all.select {|event| event.host.location == location && event.filled? == false}
     end
@@ -32,5 +32,6 @@ class Event < ActiveRecord::Base
   def has_no_user_requests(user_id)
     self.guests.where(id: user_id).size < 1
   end
+
 
 end

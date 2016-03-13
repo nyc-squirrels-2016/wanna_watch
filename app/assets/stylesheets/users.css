@@ -1,4 +1,7 @@
-
+.notification-header {
+  color: red;
+  font-weight: bold;
+}
 .container {
   margin: 0 auto;
   padding: 1% 10%;

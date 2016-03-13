@@ -5,16 +5,13 @@
     <%=image_tag(@user.profile_picture.url(:square), :class => "profile-pic")%>
 
     <h4><%= @user.first_name %> <%= @user.last_name %></h4>
-    <h5><%= @user.location %></h5> <p><button data-div-type="new_event_button">New Event</button></p>
+    <h5><%= @user.location %></h5> <button type="button" data-div-type="new_event_button" class="button" >New Event</button>
   </div>
   <div class="profile-description2">
     <p><span>About Me: </span> <%= @user.about_me %></p>
   </div>
   <div class="apt-photo-div">
     <%=image_tag(@user.where_you_watch_picture.url(:square), :class => "apt-photo")%>
-  </div>
-  <div class = "users_partial" data-div-type = "new_events_partial">
-    <%= render partial:'/events/new_event', layout: false%>
   </div>
   <div class= "upcoming-events">
   <header class="box-header">
@@ -59,4 +56,7 @@
 
   </div>
 
+</div>
+<div class = "users_partial" data-div-type = "new_events_partial">
+  <%= render partial:'/events/new_event', layout: false%>
 </div>

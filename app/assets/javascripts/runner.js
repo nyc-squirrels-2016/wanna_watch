@@ -2,5 +2,7 @@ $(document).ready(function(){
   RegisterButton()
   LoginButton()
   NewEventButton()
-  EditEventButton()
+  ExitNewEventForm()
+  ExitLogin()
+  ExitRegister()
 })
