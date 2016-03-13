@@ -33,4 +33,5 @@ class Event < ActiveRecord::Base
     self.guests.where(id: user_id).size < 1
   end
 
+
 end

@@ -13,12 +13,16 @@
 	  <p>Address: <%= event.host.address %></p>
 	  <p>Host Name: <%= event.host.first_name%> <%= event.host.last_name%></p>
 	  <%if logged_in? %>
-	  	<%if event.has_no_user_requests(current_user.id)%>
-			  <%= form_for @request do |f| %>
-			  	<%= f.hidden_field :event_id, :value => event.id %>
-			  	<%= f.submit "Send a Request"%>
-			  <%end%>
-		<%end%>
+		  <%if event.host != current_user %>
+		  	<%if event.has_no_user_requests(current_user.id)%>
+				  <%= form_for @request do |f| %>
+				  	<%= f.hidden_field :event_id, :value => event.id %>
+				  	<%= f.submit "Send a Request"%>
+				  <%end%>
+			<%end%>
+		  <%else%>
+		  	<h4>Your hosting this event!</h4>
+		  <%end%>
 	  <%end%>
 	   <div class= "card-actions">
 	    <ul class= "event-show">

@@ -22,8 +22,8 @@ var LoginButton = function(){
 }
 
 var Unbinder = function(){
-  $('*[data-div-type="login_button"]').off("click")
-  $('*[data-div-type="register_button"]').off("click")
+  $('*[data-div-type="login_button"]').unbind("click")
+  $('*[data-div-type="register_button"]').unbind("click")
 }
 
 
