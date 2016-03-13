@@ -77,9 +77,7 @@
 }
 
 .read-more {
-  position: absolute;
-  margin-left: 33%;
-  margin-top: -8%;
+  float: right;
 }
 
 .box-header {
