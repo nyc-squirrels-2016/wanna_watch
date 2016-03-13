@@ -1,5 +1,5 @@
-<div data-div-type="video"><%= video_tag "nature.mp4", :autoplay => true, :loop => true, muted: true , :class => "home-page-video"%>
-<h1 class="header">WannaWatch.com</h1>
+<div data-div-type="video"><%= video_tag "lukeandrew.mov", :autoplay => true, :loop => true, muted: true , :class => "home-page-video"%>
+<h1 class="header">Watch With Friends</h1>
 <div class="row">
 <%= form_tag(events_path, :method => "get", id: "search-form") do %>
 	<div class="large-4 columns">
@@ -21,22 +21,28 @@
 	<%= render partial:'/users/login', layout: false %>
 </div>
 
+<div id = "app_description">
+	<p><span class="wwf">Watch With Friends</span> allows you to connect with others in your community and watch TV together.</p>
+	<p>Learn more:</p>
+	<p> Hosts | Guests </p>
+</div>
+
 <div class="description1">
-	<img class = "home-image" src="http://cdn.home-designing.com/wp-content/uploads/2012/05/Modern-Black-white-living-room-furniture.jpeg" />
+	<img class = "home-image" src="/imgs/search.png" />
 	<p>
-		Lorem Khaled Ipsum is a major key to success. Surround yourself with angels, positive energy, beautiful people, beautiful souls, clean heart, angel. The key is to drink coconut, fresh coconut, trust me. Look at the sunset, life is amazing, life is beautiful, life is what you make it. Surround yourself with angels. Look at the sunset, life is amazing, life is beautiful, life is what you make it. The key to more success is to get a massage once a week, very important, major key, cloth talk
+		One you've registered with Watch With Friends, finding a place to watch your favorite shows is easy.  Simply select your borough and the show you want to watch. Look through the results and find the event you want to attend.  You can check out info about the host and the other guests who are attending before you decide.
 	</p>
 </div>
 <div class="description2">
 	<p>
-		Lorem Khaled Ipsum is a major key to success. Surround yourself with angels, positive energy, beautiful people, beautiful souls, clean heart, angel. The key is to drink coconut, fresh coconut, trust me. Look at the sunset, life is amazing, life is beautiful, life is what you make it. Surround yourself with angels. Look at the sunset, life is amazing, life is beautiful, life is what you make it. The key to more success is to get a massage once a week, very important, major key, cloth talk
+		Once you've found an event you want to attend, make a request to the host.  You'll be able to check the status of your request on the "sent requests tab" on the navigation bar at the top of the page.
 	</p>
-	<img class = "home-image" src="http://www.vanderbilt.edu/isss/wp-content/uploads/grocery-store.jpg" />
+	<img class = "home-image" src="/imgs/sentrequests.png" />
 </div>
 <div class="description3">
-	<img  id="last-home-img" class = "home-image" src="https://pixabay.com/static/uploads/photo/2015/12/09/17/12/popcorn-1085072_960_720.jpg" />
+	<img  id="last-home-img" class = "home-image" src="/imgs/watch.jpg" />
 	<p>
-		Lorem Khaled Ipsum is a major key to success. Surround yourself with angels, positive energy, beautiful people, beautiful souls, clean heart, angel. The key is to drink coconut, fresh coconut, trust me. Look at the sunset, life is amazing, life is beautiful, life is what you make it. Surround yourself with angels. Look at the sunset, life is amazing, life is beautiful, life is what you make it. The key to more success is to get a massage once a week, very important, major key, cloth talk
+		If your request gets accepted, you'll see "Accepted!" along with other information about the event on that event's page.  Show up to your host's address at the approriate time and watch with friends!
 	</p>
 </div>
 

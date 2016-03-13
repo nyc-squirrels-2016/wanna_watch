@@ -97,3 +97,13 @@ nav {
 	background-color: white;
 	border-bottom: 1px solid black;
 }
+
+#app_description {
+	text-align: center;
+	font-size: 2.5em;
+}
+
+.wwf {
+	color: blue;
+	font-weight: bold;
+}
