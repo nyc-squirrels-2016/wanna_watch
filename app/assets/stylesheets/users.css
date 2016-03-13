@@ -98,7 +98,10 @@ hr {
   border: .1em solid black;
   width: 65em;
   height: 20em;
-  margin: auto;
+  margin-left: 10%;
+  margin-right: 20%;
+  background-color: white;
+  display: inline-flex;
 }
 
 #profile-images-container {
@@ -117,7 +120,6 @@ hr {
   z-index: 2;
   top: 7.2em;
   left: 7.2em;
-
 }
 
 .apt-photo {
@@ -125,4 +127,23 @@ hr {
   height: 20em;
   float: left;
   position: absolute;
+}
+
+#profile-text-container {
+  width: 45em;
+  text-align: center;
+
+}
+
+#profile-name {
+  font-size: 3em;
+}
+
+#profile-location {
+  font-size: 2em;
+  color: grey;
+}
+
+#profile-about {
+
 }

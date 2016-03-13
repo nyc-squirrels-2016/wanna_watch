@@ -5,13 +5,11 @@
     <div id = "profile-images-container">
       <%=image_tag(@user.profile_picture.url(:square), :class => "profile-pic")%>
       <%=image_tag(@user.where_you_watch_picture.url(:square), :class => "apt-photo")%>
-
-
     </div>
     <div id = "profile-text-container">
-      <h4><%= @user.first_name %> <%= @user.last_name %></h4>
-      <p><%= @user.location %>
-      <p><%= @user.about_me %></p>
+      <span id="profile-name"><%= @user.first_name %> <%= @user.last_name %></span>
+      <p><span id="profile-location"><%= @user.location %></span>
+      <p><span id="profile-about"><%= @user.about_me %></span></p>
     </div>
   </div>
 
