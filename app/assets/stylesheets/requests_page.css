@@ -9,21 +9,7 @@
 .show-name {
 	text-align: center;
 }
-.text {
-	float: right;
-	max-width: 50%;
-	margin: 0% 20% 0% 20%;
-	border: 2px solid black;
-}
 
-.request-image2 {
-	border-radius: 100%;
-	width: 300px;
-	height: 300px;
-	margin-top: -300px;
-	margin-left: 5%;
-	margin-bottom: 20px;
-}
 
 .Happy {
 	color: green;
@@ -49,7 +35,9 @@
 	display: block;
 	margin-left: 10%;
 	margin-right: 20%;
+	margin-top: 2em;
 	display: inline-flex;
+	background-color: white;
 }
 
 .request-form {
@@ -74,6 +62,24 @@
 
 }
 
-#request-info {
-
+#request_info {
+	width: 45em;
+	text-align: center;
 }
+
+.text {
+	margin: auto;
+	width: 35em;
+	border: 2px solid black;
+}
+
+.guest-name {
+	color: grey;
+}
+
+.read_more {
+position: absolute;
+top: 3em;
+right: 11.5em;
+}
+

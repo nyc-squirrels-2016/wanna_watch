@@ -10,7 +10,7 @@
 
 		  <div id = "request_info">
 			  <h3 class="show-name"><%= request.event.show %></h3>
-			  <h4 class="show-name">Guest Name: <%= request.guest.first_name%> <%= request.guest.last_name %></h4>
+			  <h4 class="guest-name">Guest Name: <%= request.guest.first_name%> <%= request.guest.last_name %></h4>
 			  <div class="text">
 				  <p>Date: <%= request.event.date %></p>
 				  <p>Time: <%= request.event.time.strftime("%I:%M %p") %></p>
