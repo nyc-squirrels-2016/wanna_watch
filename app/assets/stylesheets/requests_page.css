@@ -32,9 +32,8 @@
 	width: 65em;
 	height: 20em;
 	border: .2em solid black;
-	display: block;
-	margin-left: 10%;
-	margin-right: 20%;
+  margin-left: 10%;
+  margin-right: 10%;
 	margin-top: 2em;
 	display: inline-flex;
 	background-color: white;
