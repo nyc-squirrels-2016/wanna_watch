@@ -25,8 +25,8 @@ body {
 
 .apartment-photo {
   border-radius: 50%;
-  width: 30%;
-  height: 15%;
+  width: 200px;
+  height: 200px;
   float: left;
   position: relative;
   top: 10;

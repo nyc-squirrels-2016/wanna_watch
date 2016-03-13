@@ -6,6 +6,7 @@
 					<h3>Undecided</h3>
 				<%elsif request.active == 0%>
 					<h3 class="Happy">Accepted!</h3>
+					<a href="/events/<%=request.event.id%>"> <img class="read-more2" src="../../imgs/read_more_button.png" /></a>
 				<%else%>
 					<h3 class="Sad">Declined</h3>
 				<%end%>
