@@ -8,4 +8,7 @@ $(document).ready(function(){
   ToggleHostedEvents()
   ToggleUpcomingEvents()
   HideHostedOnLoad()
+  ShowAboutGuesting()
+  ShowAboutHosting()
+  HideAboutsOnLoad()
 })
