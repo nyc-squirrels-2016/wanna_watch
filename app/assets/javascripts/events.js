@@ -35,6 +35,10 @@ var NewUnbinder = function(){
   $('*[data-div-type="new_event_button"]').unbind("click")
 }
 
+var HideHostedOnLoad = function(){
+  $('*[data-div-type="hosted_events_body"]').hide()
+}
+
 var ToggleHostedEvents = function (){
   $('*[data-div-type="hosted_events"]').click(function(){
     $('*[data-div-type="hosted_events_body"]').show()
