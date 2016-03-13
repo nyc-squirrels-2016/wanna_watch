@@ -11,7 +11,7 @@
 				<%end%>
 				<p>Request</p>
 				<p>Date: <%= request.event.date %></p>
-				<p>Time: <%= request.event.time.hour %>:00</p>
+				<p>Time: <%= request.event.time.strftime("%I:%M %p") %></p>
 				<p>Show: <%= request.event.show %></p>
 				<p>Name of Host: <%= request.host.first_name%> <%= request.host.last_name %></p>
 				<p>About your Host: <%= request.host.about_me %></p>

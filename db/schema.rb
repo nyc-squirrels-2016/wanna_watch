@@ -38,7 +38,6 @@ ActiveRecord::Schema.define(version: 20160312001839) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "username",                             null: false
     t.string   "password_digest"
     t.string   "email",                                null: false
     t.string   "first_name",                           null: false
@@ -59,7 +58,7 @@ ActiveRecord::Schema.define(version: 20160312001839) do
     t.datetime "where_you_watch_picture_updated_at"
   end
 
+  add_index "users", ["email"], name: "index_users_on_email", using: :btree
   add_index "users", ["location"], name: "index_users_on_location", using: :btree
-  add_index "users", ["username"], name: "index_users_on_username", using: :btree
 
 end
