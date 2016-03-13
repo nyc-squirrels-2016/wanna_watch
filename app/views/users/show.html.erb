@@ -5,6 +5,8 @@
     <div id = "profile-images-container">
       <%=image_tag(@user.profile_picture.url(:square), :class => "profile-pic")%>
       <%=image_tag(@user.where_you_watch_picture.url(:square), :class => "apt-photo")%>
+      <p data-div-type="new_event_button" class="button" >New Event</p>
+
     </div>
     <div id = "profile-text-container">
       <span id="profile-name"><%= @user.first_name %> <%= @user.last_name %></span>

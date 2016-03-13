@@ -102,6 +102,7 @@ hr {
   margin-right: 20%;
   background-color: white;
   display: inline-flex;
+
 }
 
 #profile-images-container {
@@ -120,6 +121,13 @@ hr {
   z-index: 2;
   top: 7.2em;
   left: 7.2em;
+}
+
+.button {
+  position: absolute;
+  top: 15em;
+  left: 7.2em;
+  border-radius: 10%;
 }
 
 .apt-photo {
