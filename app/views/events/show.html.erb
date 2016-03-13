@@ -27,6 +27,7 @@
 			<div class="guest-attending">
 				<div class="guest-text">
 					<p><%= guest.first_name %> <%= guest.last_name%> is Attending!</p>
+          <p><%=guest.about_me%></p>
 				</div>
         <%=image_tag(guest.profile_picture.url(:square), :class => "guest-image")%>
 			</div>
