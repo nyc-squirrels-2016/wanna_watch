@@ -1,17 +1,37 @@
 
 <%= form_for(User.new, multipart: true) do |f| %>
   <button type="button" data-div-type="close_register_button" class="button" >X</button>
-  <p><%=f.text_field :email, placeholder: "email" %></p>
-  <p><%=f.text_field :first_name, placeholder: "first name"%></p>
-  <p><%=f.text_field :last_name, placeholder: "last name"%></p>
-  <p><%=f.select :location, [["Brooklyn"],["Manhattan"],["Queens"], ["Staten Island"], ["Bronx"]] %></p>
+  <div class="row">
+    <div class="large-5 columns">
+      <%=f.text_field :first_name, placeholder: "first name"%>
+    </div>
+    <div class="large-5 columns">
+      <%=f.text_field :last_name, placeholder: "last name"%>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-5 columns">
+      <p><%=f.select :location, [["Brooklyn"],["Manhattan"],["Queens"], ["Staten Island"], ["Bronx"]] %></p>
+    </div>
+    <div class="large-5 columns">
+      <p><%=f.text_field :address, placeholder: "address" %></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-5 columns">
+      <p><%=f.text_field :email, placeholder: "email" %></p>
+    </div>
+    <div class="large-5 columns">
+      <p><%=f.password_field :password, placeholder: "password" %></p>
+    </div>
+  </div>
+  <div class="row">
   <p><%= f.text_area :about_me, placeholder: "Tell us about yourself..." %>
-  <p><%=f.text_field :address, placeholder: "address" %></p>
+  </div>
   <p><%=f.label :upload_profile_picture %></p>
   <p><%=f.file_field :profile_picture %>
     <p><%=f.label :upload_picture_of_where_you_watch_TV %></p>
     <p><%=f.file_field :where_you_watch_picture %></p>
-  <p><%=f.password_field :password, placeholder: "password" %></p>
 
 
  <p> <%= f.submit "Become a Watcher"%> </p>

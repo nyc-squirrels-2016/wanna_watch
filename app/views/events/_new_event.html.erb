@@ -1,10 +1,22 @@
 <%= form_for Event.new do |f| %>
 <button type="button" data-div-type="close_event_button" class="button" >X</button>
-  <p><%=f.text_field :show, placeholder: "Whatcha watchin?" %></p>
-  <p><%=f.number_field :max_occupancy, placeholder: "Number of available seats" %>
-  <p><%=f.text_area :description, placeholder: "Any other info?" %>
-  <p><%= f.time_select :time, :discard_minute => true, :ampm => true %></p>
-  <p><%=f.date_select :date %></p>
+<div class="row">
+	<div class="large-6 columns">
+  		<%=f.text_field :show, placeholder: "Whatcha watchin?" %>
+  	</div>
+  	<div class="large-6 columns">
+  		<%=f.number_field :max_occupancy, placeholder: "Number of available seats" %>
+  	</div>
+</div>
+<div class="row">
+  <%=f.text_area :description, placeholder: "Any other info?" %>
+</div>
+<div class="row">
+  <%= f.time_select :time, :discard_minute => true, :ampm => true %>
+</div>
+<div class="row">
+	<%=f.date_select :date %>
+</div>
  <p> <%= f.submit "Create Event"%> </p>
 
 <%end%>
