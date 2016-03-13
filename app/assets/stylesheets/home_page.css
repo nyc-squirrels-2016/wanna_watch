@@ -8,7 +8,7 @@
 #search-form {
 	position: absolute;
 	top: 50%;
-	left: 45%;
+	left: 40%;
 	display: inline;
 }
 
@@ -78,6 +78,19 @@
 	position: absolute;
 	left: 43%;
 	top: 20%;
+}
+
+.users_partial2 {
+	position: absolute;
+	left: 38%;
+	top: 20%;
+}
+.users_partial2 form {
+  width: 30em;
+  padding: 2em;
+  border: .2em solid black;
+  text-align: center;
+  background-color: #f0f0f5;
 }
 
 nav {

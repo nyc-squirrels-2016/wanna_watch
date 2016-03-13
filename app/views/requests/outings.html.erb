@@ -1,23 +1,23 @@
 <% if @requests.any? %>
 	<% @requests.each do |request| %>
 		<div class="requests-recieved">
+			<%if request.active == 1%>
+				<h3 class="show-name">Undecided</h3>
+			<%elsif request.active == 0%>
+				<h3 class="Happy show-name">Accepted!</h3>
+				<a href="/events/<%=request.event.id%>"> <img class="read-more2" src="../../imgs/read_more_button.png" /></a>
+			<%else%>
+				<h3 class="Sad show-name">Declined</h3>
+			<%end%>
+			<h3 class="show-name"><%= request.event.show %></h3>
 			<div class="text">
-				<%if request.active == 1%>
-					<h3>Undecided</h3>
-				<%elsif request.active == 0%>
-					<h3 class="Happy">Accepted!</h3>
-					<a href="/events/<%=request.event.id%>"> <img class="read-more2" src="../../imgs/read_more_button.png" /></a>
-				<%else%>
-					<h3 class="Sad">Declined</h3>
-				<%end%>
 				<p>Request</p>
 				<p>Date: <%= request.event.date %></p>
 				<p>Time: <%= request.event.time.strftime("%I:%M %p") %></p>
-				<p>Show: <%= request.event.show %></p>
 				<p>Name of Host: <%= request.host.first_name%> <%= request.host.last_name %></p>
 				<p>About your Host: <%= request.host.about_me %></p>
 			</div>
-			<%=image_tag(request.event.host.where_you_watch_picture.url(:square), :class => "request-image" ) %>
+			<%=image_tag(request.event.host.where_you_watch_picture.url(:square), :class => "request-image2" ) %>
 		</div>
 	<%end%>
 <%else%>

@@ -77,9 +77,7 @@
 }
 
 .read-more {
-  position: absolute;
-  margin-left: 33%;
-  margin-top: -8%;
+  float: right;
 }
 
 .box-header {
@@ -98,7 +96,6 @@ hr {
   font-family: helvetica;
   letter-spacing: 0;
   font-size: 1.0em;
-  text-transform: uppercase;
   position: absolute;
   left: 70%;
   top: 8%;
@@ -106,5 +103,10 @@ hr {
 
 
 .profile-description2 p span {
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
   font-weight: bolder;
 }

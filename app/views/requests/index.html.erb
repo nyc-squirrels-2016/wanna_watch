@@ -4,12 +4,12 @@
 			<div class="request-form">
 				<%= render partial: "request_form" , locals: {request: request}%>
 			</div>
+			<h3 class="show-name"><%= request.event.show %></h3>
+			<h4 class="show-name">Guest Name: <%= request.guest.first_name%> <%= request.guest.last_name %></h4>
 			<div class="text">
-				<p>Request</p>
 				<p>Date: <%= request.event.date %></p>
 				<p>Time: <%= request.event.time.strftime("%I:%M %p") %></p>
 				<p>Shows: <%= request.event.show %></p>
-				<p>Name: <%= request.guest.first_name%> <%= request.guest.last_name %></p>
 				<p>About your Guest: <%= request.guest.about_me %></p>
 			</div>
 			<%=image_tag(request.guest.profile_picture.url(:square), :class => "request-image")%>
