@@ -31,6 +31,15 @@
 	margin-bottom: 20px;
 }
 
+.request-image2 {
+	border-radius: 100%;
+	width: 300px;
+	height: 300px;
+	margin-top: -300px;
+	margin-left: 5%;
+	margin-bottom: 20px;
+}
+
 .Happy {
 	color: green;
 }
@@ -45,5 +54,5 @@
 
 .read-more2 {
 	margin-left: 66%;
-	margin-top: -7%;
+	margin-top: -5%;
 }
