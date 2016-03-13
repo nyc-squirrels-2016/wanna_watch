@@ -1,12 +1,5 @@
 
 
-.wrapper {
-  background-color: white;
-  width: 50%;
-  height: 30%;
-  margin-left: 2em;
-}
-
 body {
   background-color: #f0f0f5;
   margin-left: 5%;
@@ -21,17 +14,6 @@ body {
   font-size: 100%;
   font-family: Helvetica;
   color: black;
-}
-
-.apartment-photo {
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  float: left;
-  position: relative;
-  top: 10;
-  left: 0;
-  margin-right: 2%;
 }
 
 
@@ -58,11 +40,14 @@ body {
 }
 
 .guest-attending {
-  width: 100%;
-  max-height: 70%;
-  border: 2px solid black;
-  display: block;
-  margin: 2%;
+  width: 45em;
+  height: 7em;
+  border: .2em solid black;
+  display: inline-flex;
+  margin-left: 10%;
+  margin-right: 20%;
+  margin-top: 2em;
+  background-color: white;
 }
 
 .guest-attending p {
@@ -73,19 +58,69 @@ body {
 
 .guest-text {
   float: right;
-  width: 65%;
+  width: 45%;
 }
 
 .guest-image {
   display: inline;
   border-radius: 100%;
-  width: 150px;
-  height: 150px;
+  width: 5em;
+  height: 5em;
+  margin-top: .8em;
+  margin-left: 16em;
 }
 .attending_button {
-  margin: 10% 0% 0% 0%;
+
 }
 
 .full {
   margin: 6% 0% 0% 0%;
 }
+
+
+#event_container {
+  border: .2em solid black;
+  width: 65em;
+  height: 20em;
+  margin-top: 2em;
+  margin-left: 10%;
+  margin-right: 20%;
+  background-color: white;
+  display: inline-flex;
+}
+
+#event_images_container {
+  width: 20em;
+  height: 20em;
+  border-right: .1em solid black;
+  position: relative;
+}
+
+#event_text_container {
+  width: 45em;
+  text-align: center;
+}
+
+.apartment-photo {
+  width: 20em;
+  height: 19.7em;
+  float: left;
+  position: absolute;
+}
+
+.host-photo {
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  position: absolute;
+  border: .2em solid white;
+  z-index: 2;
+  top: 7.2em;
+  left: 7.2em;
+}
+
+#hosted_by {
+  color: grey;
+  font-size: 2em;
+}
+
