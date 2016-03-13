@@ -106,3 +106,7 @@ hr {
   font-weight: bolder;
   text-transform: uppercase;
 }
+
+.nav-link:hover {
+  font-weight: bolder;
+}
