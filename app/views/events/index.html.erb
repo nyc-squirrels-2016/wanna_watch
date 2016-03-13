@@ -7,7 +7,7 @@
 	</header>
 	  <% @events.each do |event| %>
 
-	  <p><%= event.date.month %>/<%= event.date.day %>/<%= event.date.year %> <%= event.time.hour %>:<%= event.time.min %></p>
+	  <p><%= event.date.month %>/<%= event.date.day %>/<%= event.date.year %> <%= event.time.strftime("%I:%M %p") %></p>
 	  <p>Show: <%= event.show %></p>
 	  <p>Location: <%= event.host.location %></p>
 	  <p>Address: <%= event.host.address %></p>
