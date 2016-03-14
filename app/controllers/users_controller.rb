@@ -2,7 +2,7 @@ class UsersController<ApplicationController
 
   def show
     @user = User.find(params[:id])
-    unless current_user == @user 
+    unless current_user == @user
       redirect_to root_path, alert: "You need are not Authorized to see this page"
     end
   end
@@ -15,6 +15,7 @@ class UsersController<ApplicationController
   def create
     @user = User.new(user_params)
       if @user.save
+        UserMailer.welcome_email(@user).deliver_later
         session[:user_id] = @user.id
         redirect_to @user
       else
