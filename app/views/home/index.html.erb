@@ -1,7 +1,8 @@
 <div class='row'>
-	<h1 class="header">Watch with Friends</h1>
+	<div id='header'>
+			Watch with Friends
+		</div>
 </div>
-
 <div class='row'>
 	<%= form_tag(events_path, :method => "get", id: "search-form") do %>
 
@@ -19,75 +20,34 @@
 		</span>
 	</div>
 <%end%>
-
 </div>
+
+
+<div id = "app_description">
+	<span class="wwf">Discover a New Favorite Show</span>
+		<br>
+	<div class='callout'>
+		<img class="show-1" src="../../imgs/daily-show.jpg">
+		<img class="show-2" src="../../imgs/walking-dead-season-1.jpg">
+		<img class="show-3" src="../../imgs/saul-art1.jpg">
+	</div>
+		<hr>
+	<span class="subheading">Connect with others in your Community</span>
+	<hr>
+	<p>Learn more:</p>
+	<div class='host-guest'>
+		<p> <span data-div-type="host_clicker">Hosts</span> | <span data-div-type="guest_clicker">Guests</span> </p>
+	</div>
+</div>
+
+<%= render partial: '/home/guest_description', layout: false %>
+
+<%= render partial: '/home/host_description', layout: false %>
 
 <div class = "users_partial2" data-div-type = "users_partial">
 	<%= render partial:'/users/register', layout: false %>
 </div>
+
 <div class = "users_partial" data-div-type = "login_partial">
 	<%= render partial:'/users/login', layout: false %>
-</div>
-
-<div id = "app_description">
-	<span class="wwf">Discover a New Favorite Show</span>
-	<br>
-	<span class="subheading">Connect with others in your Community</span>
-	<p>Learn more:</p>
-	<p> <span data-div-type="host_clicker">Hosts</span> | <span data-div-type="guest_clicker">Guests</span> </p>
-</div>
-
-<div data-div-type="as_a_guest">
-	<div class="description1">
-		<div class = "img_container">
-		  <img class = "home-image" src="/imgs/search.png" />
-	  </div>
-		<div class = "about_text">
-			Once you've registered with Watch With Friends, finding a place to watch your favorite shows is easy.  Simply select your borough and the show you want to watch. Look through the results and find the event you want to attend.You can check out info about the host and the other guests who are attending before you decide.
-		</div>
-	</div>
-
-	<div class="description1">
-		<div class = "img_container">
-		  <img class = "home-image" src="/imgs/sentrequests.png" />
-	  </div>
-		<div class = "about_text">
-			After finding an event you want to attend, make a request to the host. You'll be able to check the status of your request on the <em>sent requests tab</em> on the navigation bar at the top of the page.
-		</div>
-	</div>
-	<div class="description1">
-		<div class = "img_container">
-		  <img class = "home-image" src="/imgs/watch.jpg" />
-		</div>
-		<div class = "about_text">
-			If your request gets accepted, you'll see "Accepted!" along with other information about the event on that event's page. Show up to your host's address at the approriate time and watch with friends!
-		</div>
-	</div>
-</div>
-
-<div data-div-type="as_a_host">
-	<div class="description1">
-		<div class = "img_container">
-		  <img class = "home-image" src="/imgs/newevent.png" />
-		</div>
-			<div class = "about_text">
-			Once you've registered with Watch With Friends, finding others to watch with you is easy.  Navigate to your profile page and click the 'New Event' Button. Fill out the information you see there, and you'll be taken to your Event's page.
-		</div>
-	</div>
-	<div class="description1">
-		<div class = "img_container">
-		  <img class = "home-image" src="/imgs/recievedrequests.png" />
-		</div>
-		  <div class = "about_text">
-			When another user requests to join you at your event you'll see it on the <em>Recieved Requests</em> tab. From there you can see some info about your potential guest. You can choose to accept or decline their request.
-		</div>
-	</div>
-	<div class="description1">
-		<div class = "img_container">
-		  <img class = "home-image" src="/imgs/watch.jpg" />
-		</div>
-		<div class = "about_text">
-			On the day of your event, enjoy watching your television with some brand new friends!
-		</div>
-	</div>
 </div>
