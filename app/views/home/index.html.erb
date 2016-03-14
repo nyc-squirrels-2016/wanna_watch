@@ -1,21 +1,25 @@
-<div data-div-type="video"><%= video_tag "lukeandrew.mov", :autoplay => true, :loop => true, muted: true , :class => "home-page-video"%>
-<h1 class="header">Watch with Friends</h1>
-<div class="row collapse">
-<div class="search_bar">
-<%= form_tag(events_path, :method => "get", id: "search-form") do %>
-	<div class="large-5 columns ">
+<div class='row'>
+	<h1 class="header">Watch with Friends</h1>
+</div>
+
+<div class='row'>
+	<%= form_tag(events_path, :method => "get", id: "search-form") do %>
+
+	<div class="large-3 columns location_drop">
 		<%= select_tag :location, options_for_select([['Brooklyn'], ['Manhattan'], ['Staten Island'], ['Queens'], ['Bronx']]) %>
 	</div>
-	<div class="large-5 columns ">
+
+	<div class="large-7 columns show_search ">
 		<%= text_field_tag :show, params[:show], placeholder: "Search for Shows" %>
 	</div>
+
 	<div class="large-2 columns">
-		<%= submit_tag "Search" %>
+		<%= submit_tag "Search", class: 'submit_search' %>
 	</div>
 <%end%>
+
 </div>
-</div>
-</div>
+
 <div class = "users_partial2" data-div-type = "users_partial">
 	<%= render partial:'/users/register', layout: false %>
 </div>
@@ -30,15 +34,17 @@
 	<p>Learn more:</p>
 	<p> <span data-div-type="host_clicker">Hosts</span> | <span data-div-type="guest_clicker">Guests</span> </p>
 </div>
+
 <div data-div-type="as_a_guest">
 	<div class="description1">
 		<div class = "img_container">
 		  <img class = "home-image" src="/imgs/search.png" />
 	  </div>
-			<div class = "about_text">
+		<div class = "about_text">
 			Once you've registered with Watch With Friends, finding a place to watch your favorite shows is easy.  Simply select your borough and the show you want to watch. Look through the results and find the event you want to attend.You can check out info about the host and the other guests who are attending before you decide.
-			</div>
+		</div>
 	</div>
+
 	<div class="description1">
 		<div class = "img_container">
 		  <img class = "home-image" src="/imgs/sentrequests.png" />
@@ -56,6 +62,7 @@
 		</div>
 	</div>
 </div>
+
 <div data-div-type="as_a_host">
 	<div class="description1">
 		<div class = "img_container">
