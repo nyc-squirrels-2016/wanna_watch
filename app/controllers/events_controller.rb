@@ -71,6 +71,7 @@ class EventsController < ApplicationController
     if logged_in?
       @event = Event.find(params[:id])
       if @event.host == current_user
+        UserMailer.event_canceled_email(@event).deliver_now
         @event.destroy
         redirect_to current_user
       else

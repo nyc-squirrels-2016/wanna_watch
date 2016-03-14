@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+<h1>Hi <%=@user.first_name%>, </h1>
+
+<p>I'm sorry to say your Watch With Friends Event to watch <%= @show %> on <%= @date %> has been canceled by the host.  But no worries! Head back to <%= link_to "Watch With Friends", @url %> and find a new place to watch now!</p>
+
+<p>Thanks,</p>
+
+<p>The Watch With Friends Team</p>
+  </body>
+</html>
