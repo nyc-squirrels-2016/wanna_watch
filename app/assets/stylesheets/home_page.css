@@ -25,6 +25,14 @@
 
 .submit_search {
   margin-left: -4.0em;
+  height: 2.46em;
+  background-color: #AD8282;
+}
+
+.submit-button {
+  color: white;
+  font-family: helvetica;
+  font-weight: bold;
 }
 
 .description1 {
