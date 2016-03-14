@@ -133,7 +133,14 @@ hr {
   left: 7.2em;
 }
 
-.button {
+.two {
+  position: absolute;
+  top: 0.25em;
+  left: 13.7em;
+}
+
+
+.one {
   position: absolute;
   top: 0.25em;
   left: 30.4em;
@@ -244,9 +251,23 @@ hr {
   width: 100%
 }
 
+.password_two {
+  background-image: url(../../imgs/password.png);
+  background-repeat: no-repeat;
+  background-position: right 11px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  font-size: 14px;
+  height: 40px;
+  padding: 10px;
+  width: 100%
+}
 .upload {
   margin-left: 6em;
 }
+
 
 ::-webkit-input-placeholder {
   font-family: helvetica;

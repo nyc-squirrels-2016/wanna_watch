@@ -1,6 +1,6 @@
 
 <%= form_for(User.new, multipart: true) do |f| %>
-  <button type="button" data-div-type="close_register_button" class="button" >X</button>
+  <button type="button" data-div-type="close_register_button" class="button one" >X</button>
   <div class="row">
     <div class="large-6 columns">
       <%=f.text_field :first_name, placeholder: "First name", class: "first_name" %>
