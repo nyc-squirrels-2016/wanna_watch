@@ -1,17 +1,19 @@
 <div data-div-type="video"><%= video_tag "lukeandrew.mov", :autoplay => true, :loop => true, muted: true , :class => "home-page-video"%>
-<h1 class="header">Watch With Friends</h1>
-<div class="row">
+<h1 class="header">Watch with Friends</h1>
+<div class="row collapse">
+<div class="search_bar">
 <%= form_tag(events_path, :method => "get", id: "search-form") do %>
-	<div class="large-4 columns">
-	<%= select_tag :location, options_for_select([['Brooklyn'], ['Manhattan'], ['Staten Island'], ['Queens'], ['Bronx']]) %>
+	<div class="large-5 columns ">
+		<%= select_tag :location, options_for_select([['Brooklyn'], ['Manhattan'], ['Staten Island'], ['Queens'], ['Bronx']]) %>
 	</div>
-	<div class="large-5 columns">
-	<%= text_field_tag :show, params[:show], placeholder: "Search for Shows" %>
+	<div class="large-5 columns ">
+		<%= text_field_tag :show, params[:show], placeholder: "Search for Shows" %>
 	</div>
-	<div class="large-3 columns">
-	<%= submit_tag "Search" %>
+	<div class="large-2 columns">
+		<%= submit_tag "Search" %>
 	</div>
 <%end%>
+</div>
 </div>
 </div>
 <div class = "users_partial2" data-div-type = "users_partial">
@@ -22,7 +24,9 @@
 </div>
 
 <div id = "app_description">
-	<p><span class="wwf">Watch With Friends</span> allows you to connect with others in your community and watch TV together.</p>
+	<span class="wwf">Discover a New Favorite Show</span>
+	<br>
+	<span class="subheading">Connect with others in your Community</span>
 	<p>Learn more:</p>
 	<p> <span data-div-type="host_clicker">Hosts</span> | <span data-div-type="guest_clicker">Guests</span> </p>
 </div>
@@ -32,7 +36,7 @@
 		  <img class = "home-image" src="/imgs/search.png" />
 	  </div>
 			<div class = "about_text">
-			One you've registered with Watch With Friends, finding a place to watch your favorite shows is easy.  Simply select your borough and the show you want to watch. Look through the results and find the event you want to attend.  You can check out info about the host and the other guests who are attending before you decide.
+			Once you've registered with Watch With Friends, finding a place to watch your favorite shows is easy.  Simply select your borough and the show you want to watch. Look through the results and find the event you want to attend.You can check out info about the host and the other guests who are attending before you decide.
 			</div>
 	</div>
 	<div class="description1">
@@ -40,7 +44,7 @@
 		  <img class = "home-image" src="/imgs/sentrequests.png" />
 	  </div>
 		<div class = "about_text">
-			Once you've found an event you want to attend, make a request to the host.  You'll be able to check the status of your request on the "sent requests tab" on the navigation bar at the top of the page.
+			After finding an event you want to attend, make a request to the host. You'll be able to check the status of your request on the <em>sent requests tab</em> on the navigation bar at the top of the page.
 		</div>
 	</div>
 	<div class="description1">
@@ -48,7 +52,7 @@
 		  <img class = "home-image" src="/imgs/watch.jpg" />
 		</div>
 		<div class = "about_text">
-			If your request gets accepted, you'll see "Accepted!" along with other information about the event on that event's page.  Show up to your host's address at the approriate time and watch with friends!
+			If your request gets accepted, you'll see "Accepted!" along with other information about the event on that event's page. Show up to your host's address at the approriate time and watch with friends!
 		</div>
 	</div>
 </div>
@@ -58,7 +62,7 @@
 		  <img class = "home-image" src="/imgs/newevent.png" />
 		</div>
 			<div class = "about_text">
-			One you've registered with Watch With Friends, finding others to watch with you is easy.  Navigate to your profile page and click the 'New Event' Button. Fill out the information you see there, and you'll be taken to your Event's page.
+			Once you've registered with Watch With Friends, finding others to watch with you is easy.  Navigate to your profile page and click the 'New Event' Button. Fill out the information you see there, and you'll be taken to your Event's page.
 		</div>
 	</div>
 	<div class="description1">
@@ -66,7 +70,7 @@
 		  <img class = "home-image" src="/imgs/recievedrequests.png" />
 		</div>
 		  <div class = "about_text">
-			When another user requests to join you at your event you'll see it on the 'Recieed Requests' tab.  From there you can see some info about your potential guest. You can choose to accept or decline their request.
+			When another user requests to join you at your event you'll see it on the <em>Recieved Requests</em> tab. From there you can see some info about your potential guest. You can choose to accept or decline their request.
 		</div>
 	</div>
 	<div class="description1">
