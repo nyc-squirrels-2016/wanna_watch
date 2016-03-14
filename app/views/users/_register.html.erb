@@ -2,38 +2,38 @@
 <%= form_for(User.new, multipart: true) do |f| %>
   <button type="button" data-div-type="close_register_button" class="button" >X</button>
   <div class="row">
-    <div class="large-5 columns">
-      <%=f.text_field :first_name, placeholder: "first name"%>
+    <div class="large-6 columns">
+      <%=f.text_field :first_name, placeholder: "First name", class: "first_name" %>
     </div>
-    <div class="large-5 columns">
-      <%=f.text_field :last_name, placeholder: "last name"%>
-    </div>
-  </div>
-  <div class="row">
-    <div class="large-5 columns">
-      <p><%=f.select :location, [["Brooklyn"],["Manhattan"],["Queens"], ["Staten Island"], ["Bronx"]] %></p>
-    </div>
-    <div class="large-5 columns">
-      <p><%=f.text_field :address, placeholder: "address" %></p>
+    <div class="large-6 columns">
+      <%=f.text_field :last_name, placeholder: "Last name", class: "last_name" %>
     </div>
   </div>
   <div class="row">
-    <div class="large-5 columns">
-      <p><%=f.text_field :email, placeholder: "email" %></p>
-    </div>
-    <div class="large-5 columns">
-      <p><%=f.password_field :password, placeholder: "password" %></p>
+    <div class="large-12 columns">
+      <p><%=f.text_field :address, placeholder: "Address", class: 'address' %></p>
     </div>
   </div>
   <div class="row">
+    <div class="large-6 columns", id="location_dropdown">
+      <%=f.select :location, [["Brooklyn"],["Manhattan"],["Queens"], ["Staten Island"], ["Bronx"]] %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      <p><%=f.email_field :email, placeholder: "Email", class: 'email' %></p>
+    </div>
+    <div class="large-6 columns">
+      <p><%=f.password_field :password, placeholder: "Password", class: 'password' %></p>
+    </div>
+  </div>
+  <div class="large-12 columns">
   <p><%= f.text_area :about_me, placeholder: "Tell us about yourself..." %>
   </div>
-  <p><%=f.label :upload_profile_picture %></p>
-  <p><%=f.file_field :profile_picture %>
-    <p><%=f.label :upload_picture_of_where_you_watch_TV %></p>
-    <p><%=f.file_field :where_you_watch_picture %></p>
-
-
- <p> <%= f.submit "Become a Watcher"%> </p>
+  <p><%=f.label :Profile_picture, class: "pro-pic" %></p>
+  <p><%=f.file_field :profile_picture, class: 'upload' %>
+    <p><%=f.label :Your_Living_Room, class: "living-room-pic" %></p>
+    <p><%=f.file_field :where_you_watch_picture, class: 'upload' %></p>
+ <p> <%= f.submit "Become a Watcher" , class: 'submit_watcher'%> </p>
 
 <%end%>

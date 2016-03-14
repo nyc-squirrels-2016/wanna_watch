@@ -102,6 +102,16 @@ hr {
   margin-right: 20%;
   background-color: white;
   display: inline-flex;
+}
+
+.pro-pic {
+  font-family: sans-serif;
+  font-size: 110%;
+}
+
+.living-room-pic {
+  font-size: 110%;
+  font-family: sans-serif;
 
 }
 
@@ -125,9 +135,9 @@ hr {
 
 .button {
   position: absolute;
-  top: 15em;
-  left: 7.2em;
-  border-radius: 10%;
+  top: 0.25em;
+  left: 30.4em;
+  border-radius: 7%;
 }
 
 .apt-photo {
@@ -150,6 +160,100 @@ hr {
 #profile-location {
   font-size: 2em;
   color: grey;
+}
+
+.first_name {
+  background-image: url(../../imgs/name.png);
+  background-repeat: no-repeat;
+  background-position: right 11px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  font-size: 14px;
+  height: 40px;
+  padding: 10px;
+  width: 100%
+}
+
+.last_name {
+ background-image: url(../../imgs/name.png);
+  background-repeat: no-repeat;
+  background-position: right 11px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  font-size: 14px;
+  height: 40px;
+  padding: 10px;
+  width: 100%
+}
+
+.address {
+  background-image: url(../../imgs/home.png);
+  background-repeat: no-repeat;
+  background-position: right 11px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  font-size: 14px;
+  height: 45px;
+  padding: 8px;
+  width: 100%
+}
+
+.email {
+  background-image: url(../../imgs/email.png);
+  background-repeat: no-repeat;
+  background-position: right 11px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  font-size: 14px;
+  height: 40px;
+  padding: 10px;
+  width: 100%
+}
+
+#user_location {
+  font-family: helvetica;
+  /*align: center;*/
+  /*color: red;*/
+}
+
+#location_dropdown{
+    /*font-family: helvetica;*/
+  position: relative;
+  left: 6em;
+}
+
+.password {
+  background-image: url(../../imgs/password.png);
+  background-repeat: no-repeat;
+  background-position: right 11px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  font-size: 14px;
+  height: 40px;
+  padding: 10px;
+  width: 100%
+}
+
+.upload {
+  margin-left: 6em;
+}
+
+::-webkit-input-placeholder {
+  font-family: helvetica;
+}
+
+.submit_watcher {
+  font-family: helvetica;
 }
 
 #events-tabs {
