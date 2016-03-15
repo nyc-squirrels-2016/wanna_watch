@@ -1,0 +1,18 @@
+<h1><%= @conversation.id %></h1>
+<div id="chat">
+	<%if @conversation.messages.any?%>
+		<% @conversation.messages.each do |message|%>
+		<%= j render(message) %>
+		<%end%>
+	<%end%>
+</div>
+
+
+
+<%= form_for Message.new, remote: true do |f| %>
+<%= f.text_area :body%>
+<%=f.hidden_field :user_id, :value => current_user.id %>
+<%= f.hidden_field :conversation_id, :value => @conversation.id %>
+<%= f.submit "Send Message"%>
+<%end%>
+<%= subscribe_to "/conversations/#{@conversation.id}" %>

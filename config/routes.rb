@@ -6,6 +6,8 @@ resources :users, only: [:show, :create, :update]
 resources :sessions, only: [:create]
 resources :events
 resources :requests, only: [:create, :update, :index]
+resources :conversations, only: [:create, :show]
+resources :messages, only: [:create, :show]
 
 
 get 'outings' => 'requests#outings'
