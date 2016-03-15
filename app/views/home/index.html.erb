@@ -56,10 +56,13 @@
 	</div>
 </div>
 
+<div data-div-type="as_a_guest" class="guest_box">
+	<%= render partial: '/home/guest_description', layout: false %>
+</div>
 
-<%= render partial: '/home/guest_description', layout: false %>
-
-<%= render partial: '/home/host_description', layout: false %>
+<div data-div-type="as_a_host" class="host_box">
+	<%= render partial: '/home/host_description', layout: false %>
+</div>
 
 <div class = "users_partial2" data-div-type = "users_partial">
 	<%= render partial:'/users/register', layout: false %>

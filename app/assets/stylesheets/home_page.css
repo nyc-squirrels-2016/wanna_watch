@@ -113,7 +113,7 @@ nav {
 }
 
 .subheading {
-  font-size: 50%;
+  font-size: 100%;
   padding-top: 1em;
   color: #82ADAD;
   font-weight: bold;
@@ -128,59 +128,59 @@ p {
 }
 
 .show-1 {
-  width: 5.5em;
-  height: 6em;
+  width: 11em;
+  height: 12em;
 }
 
 .show-2 {
-  width: 5.5em;
-  height: 6em;
+  width: 11em;
+  height: 12em;
 }
 .show-3 {
-  width: 5.5em;
-  height: 6em;
+  width: 11em;
+  height: 12em;
 }
 
 .show-4 {
-  width: 5.5em;
-  height: 6em;
+  width: 11em;
+  height: 12em;
 }
 
 .brooklyn {
-  width: 23em;
-  height: 6em;
+  width: 44em;
+  height: 10em;
   margin-bottom: .5em;
   border: solid #CFD6D6 .3px;
 }
 
 
 .queens {
-  width: 9em;
-  height: 6em;
+  width: 17em;
+  height: 8em;
   margin-right:.2em;
   margin-bottom: .5em;
   border: solid #CFD6D6 .3px;
 }
 
 .bronx {
-  width: 13em;
-  height: 6em;
+  width: 25.6em;
+  height: 8em;
   margin-left: .5em;
   margin-bottom: .5em;
   border: solid #CFD6D6 .3px;
 }
 
 .staten_island {
-  width: 7em;
-  height: 6em;
+  width: 13em;
+  height: 8em;
   margin-left: .2em;
   border: solid #CFD6D6 .3px;
 }
 
 
 .manhattan {
-  width: 16em;
-  height: 6em;
+  width: 31em;
+  height: 8em;
   margin-left: .5em;
   border: solid #CFD6D6 .3px;
 }
@@ -198,4 +198,14 @@ p {
   font-size: 75%;
 }
 
+.host_box {
+  position: absolute;
+  top: 115em;
+  left: 30em;
+}
 
+.guest_box {
+  position: absolute;
+  top: 115em;
+  left: 30em;
+}
