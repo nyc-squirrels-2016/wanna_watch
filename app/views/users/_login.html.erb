@@ -1,6 +1,14 @@
 <%= form_tag sessions_path do %>
-	<button type="button" data-div-type="close_login_button" class="button" >X</button>
-  <p><%=text_field_tag :email, nil, placeholder: "email"%></p>
-  <p><%=password_field_tag :password, nil, placeholder: "password" %></p>
+	<button type="button" data-div-type="close_login_button" class="button two" >X</button>
+  <div class="row">
+  <div class="large-12 columns">
+  <p><%=text_field_tag :email, nil, placeholder: "Email", class: 'email' %></p>
+  </div>
+</div>
+ <div class="row">
+ <div class="large-12 columns">
+  <p><%=password_field_tag :password, nil, placeholder: "Password", class: "password_two" %></p>
   <p><%=submit_tag "Let's Watch" %></p>
+  </div>
+</div>
 <%end%>

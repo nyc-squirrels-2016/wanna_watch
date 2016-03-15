@@ -1,0 +1,30 @@
+<div class='row'>
+  <% if logged_in? %>
+    <%= link_to "Home", root_path, :class => "nav-link" %>
+     | <%= link_to "Logout", logout_path, :class => "nav-link" %> | <%= link_to "Profile", user_path(current_user), :class => "nav-link" %> |
+    <% if current_user.requests_recieved.any? %>
+      <%= link_to "Recieved Requests[#{current_user.requests_recieved.size}]", requests_path, :class => "notification-header" %>
+    <%else%>
+      <%= link_to "Recieved Requests", requests_path, :class => "nav-link" %>
+    <%end%>
+      | <%= link_to "Sent Requests", outings_path, :class => "nav-link" %>
+    <%else%>
+
+    <div class='large-1 column'>
+      <p> <%= link_to "Home", root_path %>
+    </div>
+
+    <div class='large-1 column'>
+      <span data-div-type="login_button"> <%= link_to "Login", '#' %></span>
+    </div>
+
+    <div class='large-10 column'>
+      <span data-div-type="register_button"><%= link_to "Register", '#' %></span> </p>
+    </div>
+
+    <%end%>
+    <% flash.each do |name, msg| -%>
+      <p><%= content_tag :div, msg, class: name %></p>
+  <% end -%>
+
+</div>

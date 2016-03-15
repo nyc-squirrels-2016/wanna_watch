@@ -26,6 +26,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'foundation-rails'
 gem 'private_pub'
 gem 'thin'
+gem 'mail'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
