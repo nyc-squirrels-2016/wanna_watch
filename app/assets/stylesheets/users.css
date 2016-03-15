@@ -275,7 +275,6 @@ hr {
   margin-left: 6em;
 }
 
-
 ::-webkit-input-placeholder {
   font-family: helvetica;
 }
@@ -287,4 +286,26 @@ hr {
 #events-tabs {
   text-align: center;
   color: blue;
+}
+
+.home-image {
+  height: 5em;
+  width: 5em;
+}
+
+.home-image1 {
+  height: 3em;
+  width: 3em;
+}
+
+.hosts_description {
+  background-color: #638EF8;
+  border-radius: 25px;
+  width: 100%;
+
+}
+
+.about_text {
+  color: white;
+  font-family: helvetica;
 }

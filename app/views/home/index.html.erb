@@ -1,4 +1,4 @@
-
+<div class="video"><%= video_tag "lukeandrew.mov", :autoplay => true, :loop => true, muted: true , :class => "home-page-video" %>
 <div class='row'>
 	<div id='header'>
 			Watch with Friends
@@ -22,7 +22,8 @@
 	</div>
 <%end%>
 </div>
-
+</div>
+<br>
 
 <div id = "app_description">
 	<span class="wwf">Discover a New Favorite Show</span>
@@ -32,6 +33,7 @@
 		<img class="show-2" src="../../imgs/walking-dead-season-1.jpg">
 		<img class="show-3" src="../../imgs/saul-art1.jpg">
 		<img class="show-4" src="../../imgs/GOT.jpg"
+	</div>
 	</div>
 		<hr>
 	<span class="subheading">Connect with others in your Community</span>
@@ -48,12 +50,12 @@
 		<img class="staten_island" src="../../imgs/boroughs/original.jpg">
 
 	<hr>
-	<p>How it Works</p>
+	<span class='how'>How it Works</span>
 	<div class='host-guest'>
 		<p> <span data-div-type="host_clicker">Hosts</span> | <span data-div-type="guest_clicker">Guests</span> </p>
 	</div>
 </div>
-</div>
+
 
 <%= render partial: '/home/guest_description', layout: false %>
 
