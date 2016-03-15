@@ -1,1 +1,1 @@
-<p><%= message.user.first_name %>: <%= message.body%>
+<p><%=image_tag(message.user.profile_picture.url(:square), :class => "profile-pic-convo")%> <%= message.user.first_name %>: <%= message.body%>

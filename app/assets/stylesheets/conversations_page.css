@@ -1,0 +1,78 @@
+.profile-pic-convo {
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+  border: .2em solid white;
+}
+
+.chat-container {
+  box-sizing: border-box;
+  background-color: white;
+  margin: 0;
+  width: 56%;
+  margin-left: 30em;
+  margin-right: auto;
+  padding-left: .5%;
+  border-bottom: 1px solid #bfcad2;
+}
+
+.profile-pic-convo-about {
+  float: left;
+  border-radius: 50%;
+  width: 7em;
+  height: 7em;
+  border: .2em solid white;
+}
+
+
+.chat-about-users {
+	box-sizing: border-box;
+	background-color: white;
+	float: left;
+	max-width: 26em;
+	margin-right: 2em;
+	margin-left: 2em;
+}
+
+.convo-user {
+	border-bottom: 1px solid #bfcad2;
+}
+
+.convo-user-name {
+	font-size: 1.3em;
+	font-weight: bolder;
+}
+.convo-about-header {
+	color: #82ADAD;
+	text-align: center;
+	border-bottom: 1px solid #bfcad2;
+}
+
+.convo-header {
+	text-align: center;
+	font-family: helvetica;
+	color: #82ADAD;
+	border-bottom: 2px solid #bfcad2;
+}
+
+.convo-container {
+	margin-top: 2em;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .chat-about-users {
+    	box-sizing: border-box;
+    	background-color: white;
+    	width: 100%;
+    	margin-left: 0em;
+    }
+    .chat-container {
+      box-sizing: border-box;
+      background-color: white;
+      margin: 0;
+      width: 100%;
+      padding-left: .5%;
+      border-bottom: 1px solid #bfcad2;
+    }
+}
