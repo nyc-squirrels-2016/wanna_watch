@@ -19,6 +19,13 @@
 
 }
 
+.new-event-button {
+  position: absolute;
+  top: 15em;
+  left: 7.2em;
+  border-radius: 10%;
+}
+
 .calendar {
   height: 5%;
   width: 5%;

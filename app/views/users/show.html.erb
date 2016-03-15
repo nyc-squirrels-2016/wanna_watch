@@ -5,7 +5,7 @@
     <div id = "profile-images-container">
       <%=image_tag(@user.profile_picture.url(:square), :class => "profile-pic")%>
       <%=image_tag(@user.where_you_watch_picture.url(:square), :class => "apt-photo")%>
-      <p data-div-type="new_event_button" class="button" >New Event</p>
+      <p data-div-type="new_event_button" class="button new-event-button" >New Event</p>
 
     </div>
     <div id = "profile-text-container">
@@ -62,6 +62,24 @@
 
   </div>
 
+</div>
+<div class="conversations">
+  <div class="recieved_conversations">
+    <h3>Recieved Conversations</h3>
+    <% if @user.recieved_messages.any? %>
+      <% @user.recieved_messages.each do |conversation|%>
+        <%=link_to "Conversation Between #{conversation.sender.first_name} and #{conversation.reciever.first_name}", conversation_path(conversation)%>
+      <%end%>
+    <%end%>
+  </div>
+  <div class="sent_conversations">
+    <h3>Initiated Conversations</h3>
+    <% if @user.written_messages.any? %>
+      <% @user.written_messages.each do |conversation|%>
+        <%=link_to "Conversation Between #{conversation.sender.first_name} and #{conversation.reciever.first_name}", conversation_path(conversation)%>
+      <%end%>
+    <%end%>
+  </div>
 </div>
 <div class = "users_partial2" data-div-type = "new_events_partial">
   <%= render partial:'/events/new_event', layout: false%>

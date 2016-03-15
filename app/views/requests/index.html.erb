@@ -7,7 +7,11 @@
 			  </div>
 			    <%=image_tag(request.guest.profile_picture.url(:square), :class => "request-image")%>
 		  </div>
-
+		  <%= form_for Conversation.new do |f|%>
+		  	<%= f.hidden_field :sender_id, :value => current_user.id%>
+		  	<%= f.hidden_field :reciever_id, :value => request.guest.id %>
+		  	<%= f.submit "Start Converation"%>
+		  <%end%>
 		  <div id = "request_info">
 			  <h3 class="show-name"><%= request.event.show %></h3>
 			  <h4 class="guest-name">Guest Name: <%= request.guest.first_name%> <%= request.guest.last_name %></h4>
