@@ -78,7 +78,7 @@ nav {
 
 #app_description {
 	text-align: center;
-	font-size: 2.5em;
+	font-size: 2em;
 }
 
 .wwf {
@@ -140,38 +140,41 @@ p {
 }
 
 .brooklyn {
-  width: 5.5em;
+  width: 23em;
   height: 6em;
-  margin-right: .5em;
   margin-bottom: .5em;
   border: solid #CFD6D6 .3px;
 }
 
-.manhattan {
-  width: 5.5em;
+
+.queens {
+  width: 9em;
+  height: 6em;
+  margin-right:.2em;
+  margin-bottom: .5em;
+  border: solid #CFD6D6 .3px;
+}
+
+.bronx {
+  width: 13em;
   height: 6em;
   margin-left: .5em;
   margin-bottom: .5em;
   border: solid #CFD6D6 .3px;
 }
 
-.queens {
-  width: 5.5em;
-  height: 6em;
-  margin-right:.2em;
-  border: solid #CFD6D6 .3px;
-}
-
-.bronx {
-  width: 5.5em;
-  height: 6em;
-  border: solid #CFD6D6 .3px;
-}
-
 .staten_island {
-  width: 5.5em;
+  width: 7em;
   height: 6em;
   margin-left: .2em;
+  border: solid #CFD6D6 .3px;
+}
+
+
+.manhattan {
+  width: 16em;
+  height: 6em;
+  margin-left: .5em;
   border: solid #CFD6D6 .3px;
 }
 
