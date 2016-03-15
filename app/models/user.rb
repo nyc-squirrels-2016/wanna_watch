@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   validates :location, presence: true
   validates :address, presence: true
   has_many :written_messages, class_name: "Conversation", foreign_key: :sender_id, dependent: :destroy
-  has_many :received_messages, class_name: "Conversation", foreign_key: :reciever_id, dependent: :destroy
+  has_many :recieved_messages, class_name: "Conversation", foreign_key: :reciever_id, dependent: :destroy
   has_many :messages
 
   has_attached_file :profile_picture, :storage => :s3, styles: {

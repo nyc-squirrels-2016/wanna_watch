@@ -1,4 +1,4 @@
-<h1><%= @conversation.id %></h1>
+<h1>Conversation Between <%= @conversation.sender.first_name %> and <%= @conversation.reciever.first_name%></h1>
 <div id="chat">
 	<%if @conversation.messages.any?%>
 		<% @conversation.messages.each do |message|%>
