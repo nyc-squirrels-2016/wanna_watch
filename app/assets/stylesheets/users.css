@@ -154,19 +154,6 @@ hr {
   border-radius: 7%;
 }
 
-.apt-photo {
-  width: 20em;
-  height: 19.7em;
-  float: left;
-  position: absolute;
-}
-
-#profile-text-container {
-  width: 45em;
-  text-align: center;
-
-}
-
 #profile-name {
   font-size: 3em;
 }
