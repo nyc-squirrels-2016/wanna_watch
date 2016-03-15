@@ -17,5 +17,7 @@
 //= require users.js
 //= require events.js
 //= require runner.js
+//= require private_pub
 
-$(function(){ $(document).foundation(); });
+
+
