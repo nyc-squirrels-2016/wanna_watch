@@ -20,14 +20,14 @@
   <div class="recieved_conversations">
     <% if @user.recieved_messages.any? %>
       <% @user.recieved_messages.each do |conversation|%>
-        <%=link_to "Conversation with #{conversation.sender.first_name}", conversation_path(conversation)%>
+       <p><%=image_tag(conversation.sender.profile_picture.url(:square), :class=> "small_convo_photo")%> <%=link_to "Conversation with #{conversation.sender.first_name}", conversation_path(conversation)%>
       <%end%>
     <%end%>
   </div>
   <div class="sent_conversations">
     <% if @user.written_messages.any? %>
       <% @user.written_messages.each do |conversation|%>
-        <%=link_to "Conversation with #{conversation.reciever.first_name}", conversation_path(conversation)%>
+        <p><%=image_tag(conversation.reciever.profile_picture.url(:square), :class=> "small_convo_photo")%> <%=link_to "Conversation with #{conversation.reciever.first_name}", conversation_path(conversation)%></p>
       <%end%>
     <%end%>
   </div>
