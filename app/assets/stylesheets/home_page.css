@@ -18,7 +18,7 @@
   vertical-align: middle;
   margin-left: 10em;
   z-index: 1;
-  margin-top: -48em;
+  margin-top: -25em;
 
 }
 
@@ -28,7 +28,7 @@
 	font-family: helvetica;
   color: #fefefe;
   text-align: center;
-  margin-top: -18em;
+  margin-top: -13em;
   z-index: 1;
 }
 
@@ -197,6 +197,5 @@ p {
   color: #82ADAD;
   font-size: 75%;
 }
-
 
 
