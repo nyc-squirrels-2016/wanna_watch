@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
     thumb: '100x100>',
     square: '200x200#',
     medium: '300x300>'
-  }, default_url: "/imgs/:attachment/missing_apartment.jpg"
+  }, default_url: "/imgs/:attachment/tv.png"
   validates_attachment_content_type :where_you_watch_picture, :content_type => /\Aimage\/.*\Z/
 
   has_secure_password
