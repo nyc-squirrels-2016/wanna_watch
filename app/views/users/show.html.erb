@@ -15,7 +15,24 @@
 
 <div id = "middle_level">
   <div id = 'messages_box'>
-    <p>Put messages here</p>
+    <div class="conversations">
+  <div class="recieved_conversations">
+    <p>Recieved Conversations</p>
+    <% if @user.recieved_messages.any? %>
+      <% @user.recieved_messages.each do |conversation|%>
+        <%=link_to "Conversation Between #{conversation.sender.first_name} and #{conversation.reciever.first_name}", conversation_path(conversation)%>
+      <%end%>
+    <%end%>
+  </div>
+  <div class="sent_conversations">
+    <p>Initiated Conversations</p>
+    <% if @user.written_messages.any? %>
+      <% @user.written_messages.each do |conversation|%>
+        <%=link_to "Conversation Between #{conversation.sender.first_name} and #{conversation.reciever.first_name}", conversation_path(conversation)%>
+      <%end%>
+    <%end%>
+  </div>
+</div>
   </div>
 
   <div id = "events_box">
