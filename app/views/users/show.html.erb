@@ -26,7 +26,7 @@
   <% if @user.requests_approved.any? %>
     <% @user.requests_approved.each do |event| %>
     <p class="show_in_event"><%= event.show %></p>
-    <p> <%= event.date.month %>/<%= event.date.day %>/<%= event.date.year %> <%= event.time.hour %>:<%= event.time.min %></p>
+    <p class = "event_location"> <%= event.date.month %>/<%= event.date.day %>/<%= event.date.year %> <%= event.time.hour %>:<%= event.time.min %></p>
     <p><%= event.host.address %>, <%= event.host.location %></p>
      <div class= "card-actions">
       <ul class= "event-show">
@@ -42,7 +42,7 @@
   <% if @user.events.any? %>
     <% @user.events.each do |event| %>
     <p class="show_in_event"><%= event.show %></p>
-    <p> <%= event.date.month %>/<%= event.date.day %>/<%= event.date.year %> <%= event.time.hour %>:<%= event.time.min %></p>
+    <p class = "event_location"> <%= event.date.month %>/<%= event.date.day %>/<%= event.date.year %> <%= event.time.hour %>:<%= event.time.min %></p>
     <p><%= event.host.address %>, <%= event.host.location %></p>
     <p><%= link_to "Cancel Event", event_path(event), :method => "DELETE" %>
      <div class= "card-actions">
