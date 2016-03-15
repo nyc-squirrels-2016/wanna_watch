@@ -1,0 +1,100 @@
+.user_images {
+  margin-top: 1em;
+  width: 20em;
+  height: 20em;
+  position: relative;
+  display: inline-block;
+  border: .2em solid black;
+}
+
+.apt-photo {
+  width: 20em;
+  height: 19.5em;
+  position: absolute;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 11em;
+  height: 11em;
+  position: absolute;
+  border: .2em solid white;
+  z-index: 2;
+  top: 5em;
+  left: 4.3em;
+}
+
+.profile_text_container {
+  background-color: white;
+  height: 20em;
+  margin-top: 1em;
+  border: .2em solid black;
+  width: 50em;
+  margin-left: 1em;
+}
+
+#top_box {
+  margin-left: 1em;
+  display: inline-flex;
+}
+
+#messages_box {
+  margin-top: 1em;
+  width: 20em;
+  height: 20em;
+  position: relative;
+  display: inline-block;
+  border: .2em solid black;
+  margin-left: 1em;
+  margin-top: 1em;
+  background-color: white;
+}
+
+#middle_level {
+  display: inline-flex;
+}
+
+#events_box {
+  margin-top: 1em;
+  width: 40em;
+  position: relative;
+  display: inline-block;
+  border: .2em solid black;
+  margin-left: 1em;
+  margin-top: 1em;
+  background-color: white;
+}
+
+.new-event-button {
+  position: absolute;
+  top: 18em;
+  left: 7.2em;
+  border-radius: 10%;
+}
+
+.upcoming-events {
+  box-sizing: border-box;
+  padding-left: .5%;
+/*  border-bottom: 1px solid #bfcad2;*/
+}
+
+.show_in_event {
+/*  font-weight: bold;*/
+  color: black;
+  font-size: 2em;
+}
+
+.event_location {
+  font-size: 1.5em;
+  color: grey;
+}
+
+#convo_tag {
+  text-align: center;
+}
+
+.small_convo_photo {
+  border-radius: 50%;
+  height: 3em;
+  width: 3em;
+}

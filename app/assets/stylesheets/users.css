@@ -38,17 +38,6 @@
   background-color: #f0f0f5;
 }
 
-.upcoming-events {
-  box-sizing: border-box;
-  background-color: white;
-  margin: 0;
-  width: 56%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: .5%;
-  border-bottom: 1px solid #bfcad2;
-}
-
 .box-header-title {
   font-size: 1rem;
   text-transform: uppercase;
@@ -152,19 +141,6 @@ hr {
   top: 0.25em;
   left: 30.4em;
   border-radius: 7%;
-}
-
-.apt-photo {
-  width: 20em;
-  height: 19.7em;
-  float: left;
-  position: absolute;
-}
-
-#profile-text-container {
-  width: 45em;
-  text-align: center;
-
 }
 
 #profile-name {
