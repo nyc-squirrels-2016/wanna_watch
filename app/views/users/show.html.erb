@@ -6,7 +6,9 @@
     <p data-div-type="new_event_button" class="button new-event-button" >New Event</p>
   </div>
   <div class = 'profile_text_container'>
-    <p>Put user info here</p>
+    <span id="profile-name"><%= @user.first_name %> <%= @user.last_name %></span>
+      <p><span id="profile-location"><%= @user.location %></span>
+      <p><span id="profile-about"><%= @user.about_me %></span></p>
   </div>
 </div>
 <p></p>
@@ -15,7 +17,48 @@
   <div id = 'messages_box'>
     <p>Put messages here</p>
   </div>
+
   <div id = "events_box">
-    <p>Events go here</p>
+    <div id = "events-tabs">
+      <p><img class="calendar" src="../../imgs/calendar.png" /><span data-div-type="hosted_events">Hosted Events</span> | <span data-div-type="upcoming_events">Upcoming Events</span></p>
+    </div>
+    <div class= "upcoming-events" data-div-type="upcoming_events_body">
+  <% if @user.requests_approved.any? %>
+    <% @user.requests_approved.each do |event| %>
+    <p class="show_in_event"><%= event.show %></p>
+    <p> <%= event.date.month %>/<%= event.date.day %>/<%= event.date.year %> <%= event.time.hour %>:<%= event.time.min %></p>
+    <p><%= event.host.address %>, <%= event.host.location %></p>
+     <div class= "card-actions">
+      <ul class= "event-show">
+       <a href="/events/<%=event.id%>"> <img class="read-more" src="../../imgs/read_more_button.png" /></a>
+      </ul>
+    </div>
+    <hr >
+    <% end %>
+  <%end%>
+  </div>
+
+  <div class= "upcoming-events" id="events-container" data-div-type="hosted_events_body">
+  <% if @user.events.any? %>
+    <% @user.events.each do |event| %>
+    <p class="show_in_event"><%= event.show %></p>
+    <p> <%= event.date.month %>/<%= event.date.day %>/<%= event.date.year %> <%= event.time.hour %>:<%= event.time.min %></p>
+    <p><%= event.host.address %>, <%= event.host.location %></p>
+    <p><%= link_to "Cancel Event", event_path(event), :method => "DELETE" %>
+     <div class= "card-actions">
+      <ul class= "event-show">
+       <a href="/events/<%=event.id%>"> <img class="read-more" src="../../imgs/read_more_button.png" /></a>
+      </ul>
+    </div>
+    <hr >
+    <% end %>
+  <%end%>
+
+  </div>
   </div>
 </div>
+<div class = "users_partial2" data-div-type = "new_events_partial">
+  <%= render partial:'/events/new_event', layout: false%>
+</div>
+
+

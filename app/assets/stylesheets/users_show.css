@@ -47,6 +47,7 @@
   border: .2em solid black;
   margin-left: 1em;
   margin-top: 1em;
+  background-color: white;
 }
 
 #middle_level {
@@ -56,12 +57,12 @@
 #events_box {
   margin-top: 1em;
   width: 40em;
-  height: 30em;
   position: relative;
   display: inline-block;
   border: .2em solid black;
   margin-left: 1em;
   margin-top: 1em;
+  background-color: white;
 }
 
 .new-event-button {
@@ -69,4 +70,15 @@
   top: 18em;
   left: 7.2em;
   border-radius: 10%;
+}
+
+.upcoming-events {
+  box-sizing: border-box;
+  padding-left: .5%;
+/*  border-bottom: 1px solid #bfcad2;*/
+}
+
+.show_in_event {
+  font-weight: bold;
+  color: black;
 }
