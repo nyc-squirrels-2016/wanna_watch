@@ -1,18 +1,34 @@
-<h1>Conversation Between <%= @conversation.sender.first_name %> and <%= @conversation.reciever.first_name%></h1>
-<div id="chat">
-	<%if @conversation.messages.any?%>
-		<% @conversation.messages.each do |message|%>
-		<%= j render(message) %>
+<div class="convo-container">
+	<div class="chat-about-users">
+		<h3 class="convo-header">Conversation Between <%= @conversation.sender.first_name %> and <%= @conversation.reciever.first_name%></h3>
+		<h4 class="convo-about-header">About <%= @conversation.sender.first_name %> and <%= @conversation.reciever.first_name%></h4>
+		<div class="convo-user">
+			<%=image_tag(@conversation.sender.profile_picture.url(:square), :class => "profile-pic-convo-about")%>
+			<p class="convo-user-name"><%= @conversation.sender.first_name%> <%= @conversation.sender.last_name%></p>
+			<p>Address: <%= @conversation.sender.address%>, <%= @conversation.sender.location %><p>
+			<p><%= @conversation.sender.about_me %></p>
+		</div>
+		<div class="convo-user">
+			<%=image_tag(@conversation.reciever.profile_picture.url(:square), :class => "profile-pic-convo-about")%>
+			<p class="convo-user-name"><%= @conversation.reciever.first_name%> <%= @conversation.reciever.last_name%></p>
+			<p>Address: <%= @conversation.reciever.address%>, <%= @conversation.reciever.location %><p>
+			<p><%= @conversation.reciever.about_me %></p>
+		</div>
+	</div>
+	<div class="chat-container">
+		<%= form_for Message.new, remote: true do |f| %>
+		<%= f.text_area :body%>
+		<%=f.hidden_field :user_id, :value => current_user.id %>
+		<%= f.hidden_field :conversation_id, :value => @conversation.id %>
+		<%= f.submit "Send Message", :class => "button" %>
 		<%end%>
-	<%end%>
+		<div id="chat">
+			<%if @conversation.messages.any?%>
+				<% @conversation.messages.order(created_at: :desc).limit(10).each do |message|%>
+					<p><%=image_tag(message.user.profile_picture.url(:square), :class => "profile-pic-convo")%> <%= message.user.first_name %>: <%= message.body%></p>
+				<%end%>
+			<%end%>
+		</div>
+	</div>
 </div>
-
-
-
-<%= form_for Message.new, remote: true do |f| %>
-<%= f.text_area :body%>
-<%=f.hidden_field :user_id, :value => current_user.id %>
-<%= f.hidden_field :conversation_id, :value => @conversation.id %>
-<%= f.submit "Send Message"%>
-<%end%>
 <%= subscribe_to "/conversations/#{@conversation.id}" %>

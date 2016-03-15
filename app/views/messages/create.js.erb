@@ -1,4 +1,4 @@
 <% publish_to "/conversations/#{@message.conversation_id}" do %>
-  $("#chat").append("<%= j render(@message) %>");
+  $("#chat").prepend("<%= j render(@message) %>");
   $(".new_message")[0].reset();
 <% end %>

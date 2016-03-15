@@ -9,13 +9,12 @@
   <p><span id="hosted_by">Hosted by: <%= @event.host.first_name %> <%= @event.host.last_name %></span></p>
     <p><%=@event.date.month %> / <%=@event.date.day %> / <%=@event.date.year %></p>
   <p><%=@event.time.strftime("%I:%M %p") %></p>
+  <%if @event.filled? %>
+  	<h3 class="full" >Sorry but this event is full</h3>
+  <%end%>
   </div>
 </div>
 
-
-<%if @event.filled? %>
-	<h3 class="full" >Sorry but this event is full</h3>
-<%end%>
 <!-- <div class="photo3">
   <p><img src="../../imgs/person1.png" /></p>
   <p><img src="../../imgs/person2.png" /></p>
@@ -26,8 +25,8 @@
 		<%@event.attending_guests.each do |guest| %>
 			<div class="guest-attending">
 				<div class="guest-text">
-					<p><%= guest.first_name %> <%= guest.last_name%> is Attending!</p>
-          <p><%=guest.about_me%></p>
+					<p class="guest-attending-name"><%= guest.first_name %> <%= guest.last_name%> is Attending!</p>
+          <p class="guest-attending-text"><%=guest.about_me%></p>
 				</div>
         <%=image_tag(guest.profile_picture.url(:square), :class => "guest-image")%>
 			</div>
@@ -36,7 +35,7 @@
 		<%@event.max_occupancy.times do |guest| %>
 			<div class="guest-attending">
 				<div class="guest-text">
-					<p>Empty Slot available</p>
+					<p class="guest-attending-name">Empty Slot available</p>
 				</div>
 				<img class="guest-image" src="http://placehold.it/350x350" />
 			</div>
@@ -45,7 +44,7 @@
 	<%(@event.max_occupancy - @event.attending_guests.size).times do |guest| %>
 		<div class="guest-attending">
 			<div class="guest-text">
-				<p>Empty Slot available</p>
+				<p class="guest-attending-name">Empty Slot available</p>
 			</div>
 			<img class="guest-image" src="http://placehold.it/350x350" />
 		</div>

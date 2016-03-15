@@ -40,8 +40,8 @@ body {
 }
 
 .guest-attending {
-  width: 45em;
-  height: 7em;
+  width: 65em;
+  height: 10em;
   border: .2em solid black;
   display: inline-flex;
   margin-left: 10%;
@@ -50,8 +50,9 @@ body {
   background-color: white;
 }
 
-.guest-attending p {
-  margin: 1%;
+.guest-attending-text {
+  margin-bottom: 1%;
+  margin-left: 2em;
   font-size: 1em;
   display: block;
 }
@@ -64,17 +65,19 @@ body {
 .guest-image {
   display: inline;
   border-radius: 100%;
-  width: 5em;
-  height: 5em;
+  width: 7.5em;
+  height: 7.5em;
   margin-top: .8em;
-  margin-left: 16em;
+  margin-left: 20em;
 }
 .attending_button {
-
+  margin-bottom: 2em;
 }
 
 .full {
-  margin: 6% 0% 0% 0%;
+  margin-top: 1em;
+  color: red;
+  font-weight: bold;
 }
 
 
@@ -98,7 +101,7 @@ body {
 
 #event_text_container {
   width: 45em;
-  text-align: center;
+  margin-left: 2em;
 }
 
 .apartment-photo {
@@ -110,17 +113,24 @@ body {
 
 .host-photo {
   border-radius: 50%;
-  width: 5em;
-  height: 5em;
+  width: 10em;
+  height: 10em;
   position: absolute;
   border: .2em solid white;
   z-index: 2;
-  top: 7.2em;
-  left: 7.2em;
+  top: 5em;
+  left: 5em;
 }
 
 #hosted_by {
   color: grey;
   font-size: 2em;
+}
+
+.guest-attending-name {
+  color: grey;
+  font-size: 1.4em;
+  margin-bottom: 1%;
+  margin-left: .5em;
 }
 
