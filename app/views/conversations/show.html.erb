@@ -15,7 +15,6 @@
 			<p><%= @conversation.reciever.about_me %></p>
 		</div>
 	</div>
-	</div>
 	<div class="chat-container">
 		<%= form_for Message.new, remote: true do |f| %>
 		<%= f.text_area :body%>
@@ -25,7 +24,7 @@
 		<%end%>
 		<div id="chat">
 			<%if @conversation.messages.any?%>
-				<% @conversation.messages.order(created_at: :desc).each do |message|%>
+				<% @conversation.messages.order(created_at: :desc).limit(10).each do |message|%>
 					<p><%=image_tag(message.user.profile_picture.url(:square), :class => "profile-pic-convo")%> <%= message.user.first_name %>: <%= message.body%></p>
 				<%end%>
 			<%end%>
