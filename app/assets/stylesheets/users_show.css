@@ -33,6 +33,10 @@
   margin-left: 1em;
 }
 
+.profile_text_container p {
+  margin-left: .6em;
+}
+
 #top_box {
   margin-left: 1em;
   display: inline-flex;
