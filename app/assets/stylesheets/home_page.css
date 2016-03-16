@@ -209,3 +209,10 @@ p {
   top: 115em;
   left: 30em;
 }
+
+.host_header {
+  text-align: center;
+  color: white;
+  font-size: 3em;
+
+}
