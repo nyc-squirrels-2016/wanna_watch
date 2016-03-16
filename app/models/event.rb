@@ -23,7 +23,7 @@ class Event < ActiveRecord::Base
 
   def self.search(location, show=nil)
     if show
-      Event.all.select {|event| event.host.location == location && event.show.include?(show) && event.filled? == false}
+      Event.all.select {|event| event.host.location == location && event.show.downcase.include?(show.downcase) && event.filled? == false}
     else
       Event.all.select {|event| event.host.location == location && event.filled? == false}
     end
