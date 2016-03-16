@@ -276,9 +276,8 @@ hr {
 }
 
 .hosts_description {
-  background-color: #638EF8;
-  border-radius: 25px;
-  width: 100%;
+  background-color: #82ADAD;
+  max-width: 100%
 
 }
 

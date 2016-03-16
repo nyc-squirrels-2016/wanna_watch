@@ -123,8 +123,8 @@ p {
   color: #82ADAD;
 }
 
-.host-guest {
-  color: #82ADAD;
+.host-guest p {
+  color: white;
 }
 
 .show-1 {
@@ -194,25 +194,23 @@ p {
 
 .how {
   font-weight: bold;
-  color: #82ADAD;
+  color: grey;
   font-size: 75%;
+  border: 1px solid white;
+  padding: .2em;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15%;
 }
 
 .host_box {
-  position: absolute;
-  top: 115em;
-  left: 30em;
+  width: 100%;
 }
 
 .guest_box {
-  position: absolute;
-  top: 115em;
-  left: 30em;
 }
 
 .host_header {
   text-align: center;
   color: white;
   font-size: 3em;
-
 }
