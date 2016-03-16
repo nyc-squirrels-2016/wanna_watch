@@ -81,6 +81,7 @@
 nav {
 	background-color: white;
 	border-bottom: 1px solid black;
+  height: 4em;
 }
 
 #app_description {
