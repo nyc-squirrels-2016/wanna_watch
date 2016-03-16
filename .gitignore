@@ -14,3 +14,4 @@
 /videos
 
 /config/secrets.yml
+/config/private_pub.yml
