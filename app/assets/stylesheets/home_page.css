@@ -128,22 +128,22 @@ p {
 }
 
 .show-1 {
-  width: 11em;
-  height: 12em;
+  width: 10em;
+  height: 11em;
 }
 
 .show-2 {
-  width: 11em;
-  height: 12em;
+  width: 10em;
+  height: 11em;
 }
 .show-3 {
-  width: 11em;
-  height: 12em;
+  width: 10em;
+  height: 11em;
 }
 
 .show-4 {
-  width: 11em;
-  height: 12em;
+  width: 10em;
+  height: 11em;
 }
 
 .brooklyn {
@@ -171,7 +171,7 @@ p {
 }
 
 .staten_island {
-  width: 13em;
+  width: 12.3em;
   height: 8em;
   margin-left: .2em;
   border: solid #CFD6D6 .3px;
@@ -179,7 +179,7 @@ p {
 
 
 .manhattan {
-  width: 31em;
+  width: 30em;
   height: 8em;
   margin-left: .5em;
   border: solid #CFD6D6 .3px;
