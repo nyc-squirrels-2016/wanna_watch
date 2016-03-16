@@ -285,3 +285,9 @@ hr {
   color: white;
   font-family: helvetica;
 }
+
+.event_x {
+  position: absolute;
+  right: 0em;
+  top: 0em;
+}
