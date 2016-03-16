@@ -5,7 +5,7 @@
 			  <div class="request-form">
 				  <%= render partial: "request_form" , locals: {request: request}%>
 			  </div>
-			    <%=image_tag(request.guest.profile_picture.url(:square), :class => "request-image")%>
+			    <%=image_tag(request.guest.profile_picture.url(:square), :class => "request-image2")%>
 		  </div>
 		  <%= form_for Conversation.new do |f|%>
 		  	<%= f.hidden_field :sender_id, :value => current_user.id%>

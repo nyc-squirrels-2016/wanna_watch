@@ -31,7 +31,7 @@
 .requests-recieved {
 	width: 65em;
 	height: 20em;
-	border: .2em solid black;
+	border: .13em solid black;
   margin-left: 10%;
   margin-right: 10%;
 	margin-top: 2em;
@@ -61,6 +61,16 @@
 
 }
 
+.request-image2 {
+	border-radius: 50%;
+	width: 12em;
+	height: 12em;
+	position: absolute;
+	left: 3em;
+	top: 6em;
+
+}
+
 #request_info {
 	width: 45em;
 	text-align: center;
@@ -69,7 +79,7 @@
 .text {
 	margin: auto;
 	width: 35em;
-	border: 2px solid black;
+	border: .1em solid black;
 }
 
 .guest-name {
@@ -80,15 +90,4 @@
 position: absolute;
 top: 3em;
 right: 11.5em;
-}
-
-.new-upcoming-events-header {
-		width: 65em;
-		height: 10em;
-		border: .2em solid black;
-	  margin-left: 10%;
-	  margin-right: 10%;
-		margin-top: 2em;
-		display: inline-flex;
-		background-color: white;
 }
