@@ -61,6 +61,3 @@ var ExitRegister = function(){
 
 
 
-
-
-
