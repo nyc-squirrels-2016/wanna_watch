@@ -4,7 +4,7 @@
   height: 20em;
   position: relative;
   display: inline-block;
-  border: .2em solid black;
+  border: .3px solid black;
 }
 
 .apt-photo {
@@ -18,7 +18,7 @@
   width: 11em;
   height: 11em;
   position: absolute;
-  border: .2em solid white;
+  border: .3px solid white;
   z-index: 2;
   top: 5em;
   left: 4.3em;
@@ -28,7 +28,7 @@
   background-color: white;
   height: 20em;
   margin-top: 1em;
-  border: .2em solid black;
+  border: .3px solid black;
   width: 50em;
   margin-left: 1em;
 }
@@ -44,7 +44,7 @@
   height: 20em;
   position: relative;
   display: inline-block;
-  border: .2em solid black;
+  border: .3px solid black;
   margin-left: 1em;
   margin-top: 1em;
   background-color: white;
@@ -59,7 +59,7 @@
   width: 50em;
   position: relative;
   display: inline-block;
-  border: .2em solid black;
+  border: .3px solid black;
   margin-left: 1em;
   margin-top: 1em;
   background-color: white;
@@ -86,7 +86,7 @@
 
 .event_location {
   font-size: 1.5em;
-  color: grey;
+  color: gray;
 }
 
 #convo_tag {
