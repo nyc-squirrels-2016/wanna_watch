@@ -10,7 +10,7 @@
 		  <%= form_for Conversation.new do |f|%>
 		  	<%= f.hidden_field :sender_id, :value => current_user.id%>
 		  	<%= f.hidden_field :reciever_id, :value => request.guest.id %>
-		  	<%= f.submit "Start Converation"%>
+		  	<%= f.submit "Start Converation", :class => "button"%>
 		  <%end%>
 		  <div id = "request_info">
 			  <h3 class="show-name"><%= request.event.show %></h3>
