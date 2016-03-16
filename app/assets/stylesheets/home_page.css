@@ -81,6 +81,7 @@
 nav {
 	background-color: white;
 	border-bottom: 1px solid black;
+  height: 4em;
 }
 
 #app_description {
@@ -123,27 +124,27 @@ p {
   color: #82ADAD;
 }
 
-.host-guest {
-  color: #82ADAD;
+.host-guest p {
+  color: white;
 }
 
 .show-1 {
-  width: 11em;
-  height: 12em;
+  width: 10em;
+  height: 11em;
 }
 
 .show-2 {
-  width: 11em;
-  height: 12em;
+  width: 10em;
+  height: 11em;
 }
 .show-3 {
-  width: 11em;
-  height: 12em;
+  width: 10em;
+  height: 11em;
 }
 
 .show-4 {
-  width: 11em;
-  height: 12em;
+  width: 10em;
+  height: 11em;
 }
 
 .brooklyn {
@@ -171,7 +172,7 @@ p {
 }
 
 .staten_island {
-  width: 13em;
+  width: 12.3em;
   height: 8em;
   margin-left: .2em;
   border: solid #CFD6D6 .3px;
@@ -179,7 +180,7 @@ p {
 
 
 .manhattan {
-  width: 31em;
+  width: 30em;
   height: 8em;
   margin-left: .5em;
   border: solid #CFD6D6 .3px;
@@ -194,25 +195,39 @@ p {
 
 .how {
   font-weight: bold;
-  color: #82ADAD;
+  color: grey;
   font-size: 75%;
+  border: 1px solid white;
+  padding: .2em;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15%;
 }
 
 .host_box {
-  position: absolute;
-  top: 115em;
-  left: 30em;
+  width: 100%;
 }
 
 .guest_box {
-  position: absolute;
-  top: 115em;
-  left: 30em;
 }
 
 .host_header {
   text-align: center;
   color: white;
   font-size: 3em;
+}
 
+.logo {
+  height: 2em;
+  width: 3em;
+  margin-top: 1em;
+  margin-left: .5em;
+  display: inline-block;
+}
+
+.nav-links{
+  margin-top: 1em;
+}
+
+.clearer {
+  float: left !important;
 }

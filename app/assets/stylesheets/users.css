@@ -9,7 +9,7 @@
 
 .profile-description {
   background-color: white;
-  border-bottom: .3px solid #bfcad2;
+  border-bottom: .3em solid #bfcad2;
   width: 20em;
   text-align: center;
   font-family: helvetica;
@@ -33,7 +33,7 @@
 .users_partial form {
   width: 15em;
   padding: 2em;
-  border: .3px solid black;
+  border: .2em solid black;
   text-align: center;
   background-color: #f0f0f5;
 }
@@ -61,7 +61,7 @@
 }
 
 .box-header {
-  border-bottom: .3px solid #bfcad2;
+  border-bottom: .3em solid #bfcad2;
 }
 
 hr {
@@ -70,7 +70,7 @@ hr {
 
 .profile-description2 {
   background-color: white;
-  border-bottom: .3px solid #bfcad2;
+  border-bottom: .3em solid #bfcad2;
   width: 20em;
   text-align: center;
   font-family: helvetica;
@@ -91,7 +91,7 @@ hr {
   font-weight: bolder;
 }
 #profile-box {
-  border: .3px solid black;
+  border: .3em solid black;
   width: 65em;
   height: 20em;
   margin-left: 10%;
@@ -114,7 +114,7 @@ hr {
 #profile-images-container {
   width: 20em;
   height: 20em;
-  border-right: .3px solid black;
+  border-right: .3em solid black;
   position: relative;
 }
 
@@ -123,7 +123,7 @@ hr {
   width: 5em;
   height: 5em;
   position: absolute;
-  border: .3px solid white;
+  border: .3em solid white;
   z-index: 2;
   top: 7.2em;
   left: 7.2em;
@@ -276,9 +276,8 @@ hr {
 }
 
 .hosts_description {
-  background-color: #638EF8;
-  border-radius: 25px;
-  width: 100%;
+  background-color: #82ADAD;
+  max-width: 100%
 
 }
 

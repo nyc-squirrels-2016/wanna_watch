@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require foundation
 //= require_tree .
+//= require how_it_works.js
 //= require users.js
 //= require events.js
 //= require runner.js
