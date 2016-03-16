@@ -40,18 +40,16 @@
 
 .convo-user-name {
 	font-size: 1.3em;
-	font-weight: bolder;
+  color: grey;
 }
 .convo-about-header {
-	color: #82ADAD;
-	text-align: center;
-	border-bottom: 1px solid #bfcad2;
+  display: none;
 }
 
 .convo-header {
 	text-align: center;
 	font-family: helvetica;
-	color: #82ADAD;
+	color: black;
 	border-bottom: 2px solid #bfcad2;
 }
 
