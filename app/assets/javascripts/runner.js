@@ -11,4 +11,6 @@ $(document).ready(function(){
   ShowAboutGuesting()
   ShowAboutHosting()
   HideAboutsOnLoad()
+  HighlightHostedTextOnClick()
+  HighlightUpcomingTextOnClick()
 })
