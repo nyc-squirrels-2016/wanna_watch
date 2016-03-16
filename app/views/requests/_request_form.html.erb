@@ -1,6 +1,6 @@
 <%= form_for request do |f| %>
 	<%= f.select :active, [['Still Thinking', 1], ['Accept', 0], ['Decline', -1]]%>
-	<%= f.submit "Decide" %>
+	<%= f.submit "Decide", :class => "button" %>
 	<%= f.hidden_field :event_id , :value => request.event.id %>
 	<%= f.hidden_field :id , :value => request.id %>
 <%end%>

@@ -2,34 +2,42 @@
 <div class= "container">
 
 	<div class= "upcoming-events">
-	<header class="box-header">
-	  <h5 class=" box-header-title"><img class="calendar" src="../../imgs/calendar.png" /> Upcoming Events</h5>
+	<header class="box-header" id="new-upcoming-events-header">
+	  <h5 class=" box-header-title" id="calendar-box-header-title"><img class="calendar" id="calendar2" src="../../imgs/calendar.png" /> Upcoming Events</h5>
 	</header>
 	  <% @events.each do |event| %>
-
-	  <p><%= event.date.month %>/<%= event.date.day %>/<%= event.date.year %> <%= event.time.strftime("%I:%M %p") %></p>
-	  <p>Show: <%= event.show %></p>
-	  <p>Location: <%= event.host.location %></p>
-	  <p>Address: <%= event.host.address %></p>
-	  <p>Host Name: <%= event.host.first_name%> <%= event.host.last_name%></p>
-	  <%if logged_in? %>
-		  <%if event.host != current_user %>
-		  	<%if event.has_no_user_requests(current_user.id)%>
-				  <%= form_for @request do |f| %>
-				  	<%= f.hidden_field :event_id, :value => event.id %>
-				  	<%= f.submit "Send a Request"%>
-				  <%end%>
-			<%end%>
-		  <%else%>
-		  	<h4>You're hosting this event!</h4>
+	  <div class="upcoming-event-class">
+	  	<div class="upcoming-event-image">
+	  		<%=image_tag(event.host.where_you_watch_picture.url(:square), :class => "event-image" ) %>
+	  		<ul class= "event-show">
+	  		 <a href="/events/<%=event.id%>"> <img class="read-more" src="../../imgs/read_more_button.png" /></a>
+	  		</ul>
+	  	</div>
+	  	<div id="upcoming-event-info">
+	  	  <h3 class="show-name"><%= event.show %></h3>
+	  	  <h5 class="show-name">Host Name: <%= event.host.first_name%> <%= event.host.last_name%></h5>
+	  	  <div class="text2">
+		  <p><%= event.date.month %>/<%= event.date.day %>/<%= event.date.year %> <%= event.time.strftime("%I:%M %p") %></p>
+		  <p>Location: <%= event.host.location %></p>
+		  <p>Address: <%= event.host.address %></p>
+		  <p>About Your Host: <%= event.host.about_me %></p>
+		</div>
+		  <%if logged_in? %>
+			  <%if event.host != current_user %>
+			  	<%if event.has_no_user_requests(current_user.id)%>
+					  <%= form_for @request do |f| %>
+					  	<%= f.hidden_field :event_id, :value => event.id %>
+					  	<%= f.submit "Send a Request", :class => "button", :id => "event-send-request-button" %>
+					  <%end%>
+				<%end%>
+			  <%else%>
+			  	<h4>You're hosting this event!</h4>
+			  <%end%>
 		  <%end%>
-	  <%end%>
-	   <div class= "card-actions">
-	    <ul class= "event-show">
-	     <a href="/events/<%=event.id%>"> <img class="read-more" src="../../imgs/read_more_button.png" /></a>
-	    </ul>
-	  </div>
-	  <hr >
+		   <div class= "card-actions">
+		  </div>
+		</div>
+	</div>
 	  <% end %>
 
 	</div>

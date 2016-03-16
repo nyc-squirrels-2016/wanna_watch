@@ -134,3 +134,63 @@ body {
   margin-left: .5em;
 }
 
+#new-upcoming-events-header {
+    width: 65em;
+    height: 5em;
+    border: .2em solid black;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2em;
+    display: inline-flex;
+    background-color: white;
+}
+
+#calendar2 {
+  width: 3em;
+  height: 3em;
+}
+
+#calendar-box-header-title {
+  font-size: 1.1em;
+}
+
+.upcoming-event-image {
+  position: relative;
+  width: 20em;
+  height: 20em;
+  border-right: .1em solid black;
+}
+
+.upcoming-event-class {
+    width: 65em;
+    height: 20em;
+    border: .1em solid black;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2em;
+    display: inline-flex;
+    background-color: white;
+}
+
+#upcoming-event-info {
+  width: 45em;
+  text-align: center;
+}
+#event-send-request-button {
+  margin-top: .6em;
+}
+
+.event-image {
+  border-radius: 50%;
+  width: 12em;
+  height: 12em;
+  position: absolute;
+  left: 4em;
+  top: 4em;
+
+}
+.text2 {
+  margin: auto;
+  width: 35em;
+  border: .1em solid black;
+}
