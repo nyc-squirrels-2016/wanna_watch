@@ -10,7 +10,9 @@
     <% if current_user.requests_recieved.any? %>
     <div class="large-2 columns nav-links"><%= link_to "Recieved Requests[#{current_user.requests_recieved.size}]", requests_path, :class => "notification-header" %></div>
     <%else%>
+    <div class="large-2 columns nav-links">
     <%= link_to "Recieved Requests", requests_path, :class => "nav-link" %>
+  </div>
     <%end%>
     <div class="large-2 columns nav-links clearer"><%= link_to "Sent Requests", outings_path, :class => "nav-link" %></div>
     <%else%>
