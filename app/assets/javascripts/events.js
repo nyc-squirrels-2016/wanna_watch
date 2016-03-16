@@ -43,6 +43,8 @@ var ToggleHostedEvents = function (){
   $('*[data-div-type="hosted_events"]').click(function(){
     $('*[data-div-type="hosted_events_body"]').show()
     $('*[data-div-type="upcoming_events_body"]').hide()
+    $('*[data-div-type="hosted_events"]').css("font-weight", "bold")
+    $('*[data-div-type="upcoming_events"]').css("font-weight", "normal")
   });
 }
 
@@ -50,5 +52,9 @@ var ToggleUpcomingEvents = function (){
   $('*[data-div-type="upcoming_events"]').click(function(){
     $('*[data-div-type="upcoming_events_body"]').show()
     $('*[data-div-type="hosted_events_body"]').hide()
+    $('*[data-div-type="upcoming_events"]').css("font-weight", "bold")
+    $('*[data-div-type="hosted_events"]').css("font-weight", "normal")
   });
 }
+
+
